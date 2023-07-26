@@ -1,0 +1,837 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Journal &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'MDArticle';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Journal
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/MDArticle.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Journal</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Journal</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#article">Article</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#achtergrond-en-opbouw-van-dcn">Achtergrond en opbouw van DCN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#een-eerste-overzicht-van-de-inhoud-van-dcn">Een eerste overzicht van de inhoud van DCN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeelden-van-mogelijkheden-tot-nader-inhoudelijk-onderzoek">Voorbeelden van mogelijkheden tot nader inhoudelijk onderzoek</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brederode">Brederode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plaatsnamen">Plaatsnamen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erfpacht">Erfpacht</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mogelijkheden-van-dcn-en-methodische-reflectie">Mogelijkheden van DCN en methodische reflectie</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="journal">
+<h1>Journal<a class="headerlink" href="#journal" title="Permalink to this heading">#</a></h1>
+<p><strong>Title:</strong> BMGN - Low Countries Historical Review
+<strong>ISSN (epub):</strong> 2211-2898
+<strong>ISSN (ppub):</strong> 0165-0505
+<strong>Publisher:</strong> Royal Netherlands Historical Society | KNHG
+<strong>Publisher Location:</strong> Amsterdam, The Netherlands</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="article">
+<h1>Article<a class="headerlink" href="#article" title="Permalink to this heading">#</a></h1>
+<p><strong>Article ID (Publisher):</strong> bmgn-lchr.6997
+<strong>DOI:</strong> 10.51769/bmgn-lchr.6997
+<strong>Category:</strong> Article
+<strong>Title:</strong> De Digitale Charterbank Nederland
+<strong>Authors:</strong> Burgers, Jan; Hoekstra, Rik
+<strong>Publication Date (epub):</strong> 2021-09
+<strong>Volume:</strong> 136
+<strong>Issue:</strong> 3
+<strong>Pages:</strong> 92-119</p>
+<section id="inleiding">
+<h2>Inleiding<a class="headerlink" href="#inleiding" title="Permalink to this heading">#</a></h2>
+<p>In januari 2019 werd de <em>Digitale Charterbank Nederland</em> (DCN) opengesteld. DCN is de uitkomst van een samenwerking tussen het Huygens Instituut voor Nederlandse Geschiedenis te Amsterdam en de firma De Ree Archiefsystemen te Groningen. Aan het ontsluitingsproject werd ook deelgenomen door Het Utrechts Archief. In dit artikel geven we een overzicht van DCN, zijn structuur en zijn inherente mogelijkheden en problemen. We willen hiermee bijdragen aan een bewustwording van de methodologische implicaties van het gebruik van digitale bronnen en gereedschappen (of <em>tools</em>) in het historisch bedrijf waarmee de onderzoeker in toenemende mate te maken krijgt.
+De auteurs van deze bijdrage hebben DCN geëntameerd met het idee om het omvangrijke complex aan charters in Nederlandse archieven toegankelijk te maken voor onderzoekers. Charters, ofwel oorkonden, zijn korte of lange teksten op losse stukken perkament of papier, uitgevaardigd en bezegeld door gezagsdragers of andere instanties.<a href="#_ftn2" name="_ftnref2">[2]</a> Charters vormen belangrijke historische bronnen met informatie over allerlei maatschappelijke aspecten, zoals eigendom van rechten of goederen, politiek en bestuur, kerkelijke organisatie of sociaal-economische verhoudingen. Uit de middeleeuwen, maar ook nog lang daarna, zijn er tienduizenden charters bewaard gebleven die in het historisch onderzoek evenwel slechts zeer beperkt worden gebruikt. Dit komt vooral door de heuristische problemen waarvoor de onderzoeker zich gesteld ziet wanneer hij of zij met dit bronmateriaal aan de slag gaat. De vroegste Nederlandse oorkonden, ongeveer tot het jaar 1300, zijn meestendeels uitgegeven, maar voor de latere stukken moet de onderzoeker naar het archief. Daar wordt hij of zij dan geconfronteerd met een massa charters, verspreid over honderden afzonderlijke archieffondsen in tientallen verschillende archiefbewaarplaatsen. Dit maakt het vinden van de relevante stukken voor de onderzoeker een tijdrovende bezigheid. Talloze inventarissen moeten worden doorgeplozen, waarbij in veel gevallen zal blijken dat de beschrijvingen van de individuele oorkonden ontoereikend is (daarover hierna meer).<a href="#_ftn3" name="_ftnref3">[3]</a>
+De opzet van DCN was om deze documenten in een database bijeen te brengen en doorzoekbaar te maken. Aanvankelijk was het idee dat daarmee vooral de onderzoekers van de (late) middeleeuwen bediend zouden worden. Nu DCN operationeel is, blijkt dat ongeveer de helft van de oorkonden stamt uit de vroegmoderne periode. Het in DCN bijeengebrachte materiaal vormt al met al een vrijwel onontgonnen bron voor de onderzoekers van de middeleeuwen en het <em>ancien régime</em>.
+In dit artikel gaan we in op de opzet en realisatie van de database als samenwerkingsproject tussen onderzoekers en de leverancier van archiefsystemen. Hierbij bespreken we de mogelijkheden die de database biedt voor toekomstig onderzoek, alsmede de valkuilen en moeilijkheden die dergelijk onderzoek met zich meebrengt. DCN is een enorme verzameling en het is daarom niet doenlijk om een uitputtend overzicht te geven van wat er allemaal mee mogelijk is. Het volgende is daarom vooral bedoeld om een overzicht te geven van het materiaal en een startpunt te bieden voor toekomstig onderzoek, waarvan ook wij de aard en reikwijdte niet kunnen overzien. Daarnaast willen we enig inzicht geven in de potentie van DCN en waar historici op moeten letten bij het gebruik van dit nieuwe instrument. Tevens kan de casus dienen om de onderzoeker bewust te maken van de mogelijkheden en problemen die zich in het algemeen voordoen bij het gebruik van grootschalige digitale dataverzamelingen. We illustreren ons overzicht van DCN met concrete voorbeelden, niet alleen om het abstracte verhaal te verlevendigen, maar ook om het karakter en de eigenaardigheden van de database zoveel mogelijk inzichtelijk te maken.</p>
+</section>
+<section id="achtergrond-en-opbouw-van-dcn">
+<h2>Achtergrond en opbouw van DCN<a class="headerlink" href="#achtergrond-en-opbouw-van-dcn" title="Permalink to this heading">#</a></h2>
+<p>De beoefening van de geschiedwetenschap is de afgelopen decennia in verschillende opzichten ingrijpend veranderd door digitale hulpmiddelen en technieken. Natuurlijk is dat niet onopgemerkt gebleven.<a href="#_ftn4" name="_ftnref4">[4]</a> Veel aandacht van zowel IT-specialisten als gebruikers gaat uit naar de toepassing van digitale methoden en tools, zoals digitale kaarten, databases en visualisaties. Zeker zo belangrijk is de komst van grote digitale bronnencomplexen, die van invloed zijn op vrijwel alle aspecten van de geschiedbeoefening. Elke historicus gebruikt dergelijke collecties, uiteenlopend van bibliografische ontsluitingen zoals de Nederlandse Centrale Catalogus, WorldCat en Google Books, tot allerhande sites met gedigitaliseerde historische bronnen zoals bijvoorbeeld te vinden in de <em>resources</em> van het Huygens Instituut voor Nederlandse Geschiedenis.<a href="#_ftn5" name="_ftnref5">[5]</a> Op een enkele uitzondering na ontbreken in de traditionele gedrukte media besprekingen van dergelijke digitale collecties, terwijl er grote verschillen zijn in omvang, kwaliteit en mate van toegankelijkheid van al deze verzamelingen.<a href="#_ftn6" name="_ftnref6">[6]</a>
+DCN verschilt van veel andere digitale verzamelingen van historische bronnen, zowel door zijn omvang als doordat hij niet is opgezet vanuit een afgebakend bronnencorpus of met het oog op een specifieke onderzoeksvraag. De database bevat momenteel de beschrijvingen van ruim 180.000 oorkonden uit het gebied van het huidige Nederland. Niemand heeft een idee hoeveel oorkonden er in de Nederlandse geschiedenis zijn uitgevaardigd, maar veruit het grootste deel van de overgeleverde originele oorkonden is nu bijeengebracht in DCN.
+Bij de realisatie van DCN is besloten de inventarissen waaruit de databank moet worden opgebouwd te genereren uit de archiefbeheerssystemen waar ze onderdeel van uitmaken. Samenwerking met De Ree Archiefsystemen, die de archiefsystemen van veel archieven centraal beheert, was hiervoor onontbeerlijk. DCN is daarmee feitelijk afgeleid van de archiefbeheerdatabase van dit bedrijf, waarin de deelnemende archiefdiensten hun inventarissen in het archief- en collectiebeheersysteem MAIS-Flexis onderhouden.</p>
+<p><img alt="Image" src="https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1024" /></p>
+<p>Het doel van DCN is om zo <em>alle</em> overgeleverde originele charters toegankelijk te maken, met inbegrip van archiefinventarissen buiten MAIS-Flexis.<a href="#_ftn7" name="_ftnref7">[7]</a> Deze ‘externe’ charters vertegenwoordigen momenteel ongeveer twintig procent van het totale aantal documenten in DCN. In de praktijk is veel projectwerk besteed aan het toevoegen van die externe inventarissen, aangezien de aldus aangeleverde informatie nogal wat onderlinge variatie vertoonde. Om uiteenlopende redenen ontbreken er nog enkele diensten, maar veruit de meeste Nederlandse charters zijn nu vindbaar via DCN en de inhoud wordt nog steeds aangevuld.<a href="#_ftn8" name="_ftnref8">[8]</a> In het geval van de MAIS-Flexis-archieven worden alle aangebrachte aanvullingen en verbeteringen direct zichtbaar in DCN. Bij de externe archieven zijn de inventarissen statischer van karakter en zullen zij periodiek en naar behoefte worden ververst op basis van de door de betreffende diensten digitaal aan te leveren inventarissen.<a href="#_ftn9" name="_ftnref9">[9]</a>
+Door de gekozen opzet vormen de verzamelde inventaristeksten derhalve het perspectief op de charters. De oorsprong van veel van deze teksten ligt in de gedrukte of getypte inventarissen die in de loop der tijd door archivarissen zijn geproduceerd volgens een doorgaans strak aangehouden systematiek die al rond 1900 was ontwikkeld.<a href="#_ftn10" name="_ftnref10">[10]</a> Bij digitalisering zijn die inventarissen vaak wel enigszins aangepast aan het nieuwe medium, maar zelden inhoudelijk gereviseerd. Binnen de inventarissen zijn de beschrijvingen van de afzonderlijke charters in de meeste gevallen vrij summier, vaak beperkt tot de datum van uitvaardiging en een korte samenvatting van de inhoud van het stuk. In een minderheid van de charters is er tevens een wat uitvoeriger regest (samenvatting) opgenomen. In nog minder gevallen zijn er uitgebreide omschrijvingen beschikbaar, soms zelfs transcripties. Van 28.000 documenten is er bovendien een afbeelding van het document beschikbaar, in DCN toegankelijk vanuit de originele inventaris. Op de sites van de originele archiefdiensten zijn nog meer afbeeldingen gelinkt.
+In DCN is de doorzoekbaarheid beperkt tot een full text-zoekmogelijkheid in de beschrijvingen, regesten (mits aanwezig) en de datum. Als er een afbeelding beschikbaar is, wordt die ook getoond. Daarnaast heeft de gebruiker de mogelijkheid om per jaar of per periode te selecteren. DCN biedt daarmee een tamelijk summiere zoekmogelijkheid. Daar staat tegenover dat een zoekopdracht altijd gegevens retourneert uit de achterliggende boomstructuur van de inventaris, alsook uit de door de archieven toegevoegde data, zoals datum, jaartal of trefwoorden. Wanneer men bijvoorbeeld zoekt op de term ‘hanze’, resulteert dat in 62 resultaten, waarbij in 37 gevallen het woord ‘hanze’ niet in de tekst van de beschrijving staat, maar elders in de data van de betreffende inventarisnummers.<a href="#_ftn11" name="_ftnref11">[11]</a>
+DCN heeft een heteromorf karakter. Dit betekent dat de inhoud van verschillende samenstellende delen niet op elkaar is afgestemd, behalve door wat stroomlijnende scripts die door de beheerder van de database zijn uitgevoerd. Die scripts hadden echter wat bijeffecten omdat niet alle variatie in regels is te vangen en omdat 180.000 documenten niet handmatig zijn te controleren. Bovendien zijn bij de digitalisering van de inventarissen en de bijkomende structurering naar de databasevorm de regesten soms gescheiden van de beschrijvingen, terwijl een ouder analoog systeem van onderlinge verwijzingen niet meer werkt. Bij onzekere datering is de gereconstrueerde datum soms weggevallen of verhaspeld. Al naargelang de opzet van de oorspronkelijke papieren inventaris kunnen de beschrijvingen van de charters over verschillende niveaus in de database verspreid zijn geraakt.
+Verder laten de beschrijvingen van de afzonderlijke stukken nogal eens te wensen over omdat de boomstructuur van de oorspronkelijke papieren inventaris na conversie naar EAD haar functie heeft verloren. Een voorbeeld is een inventarisnummer met de minimale omschrijving ‘1320-1608. 17 charters en 5 stukken’. In DCN ziet men dat dit een collectie betreft in het archief van het stadsbestuur van Harderwijk, getiteld ‘Koop- en transportbrieven en andere voluntaire en contentieuze acten, 1320-1807. 2 doozen’. Men kan vervolgens via de site van de betreffende archiefdienst doorklikken naar de regesten van de betreffende akten, te vinden in een aparte afdeling van de analoge inventaris, die in de digitale inventaris helaas niet aan het inventarisnummer zijn gekoppeld en derhalve niet doorzoekbaar zijn in DCN.<a href="#_ftn12" name="_ftnref12">[12]</a> Bij de niet-MAIS-Flexis-archieven is soms extra informatie beschikbaar, waaronder scans van oorkonden, via een link naar de website van de betreffende dienst.
+Bij de presentatie van een enkele archiefinventaris in seriële vorm leiden deze eigenaardigheden niet snel tot problemen, maar in de verzamelpresentatie van DCN worden alle individuele mankementen bij elkaar opgeteld en daardoor uitvergroot. Hoewel in het project de grootste manco’s zijn opgelost, blijven er altijd gevallen die alleen kunnen worden rechtgezet door de individuele archiefinstellingen die de kennis – en, als eigenaars van de data, de bevoegdheid – hebben om hun beschrijvingen inhoudelijk te wijzigen. Hoewel enkele diensten momenteel ten behoeve van DCN doende zijn de data te corrigeren, worden die verbeteringen door gebrek aan tijd en menskracht niet altijd snel doorgevoerd. De wél uitgevoerde wijzigingen zijn in DCN evenwel direct zichtbaar, want het is een dynamisch systeem.<a href="#_ftn13" name="_ftnref13">[13]</a> Hierdoor, en doordat steeds meer scans van de charters worden toegevoegd, zal de database in de loop van de tijd verbeteren.</p>
+<p><img alt="Image" src="figures/bmgn-lchr.6997_fig2.jpg" /></p>
+</section>
+<section id="een-eerste-overzicht-van-de-inhoud-van-dcn">
+<h2>Een eerste overzicht van de inhoud van DCN<a class="headerlink" href="#een-eerste-overzicht-van-de-inhoud-van-dcn" title="Permalink to this heading">#</a></h2>
+<p>Hoewel we nauw betrokken waren bij de realisatie van DCN, kennen ook wij bij lange na niet alle ruim 180.000 charters uit de in totaal 91 archiefdiensten. Het navolgende overzicht van de inhoud is daarom noodzakelijkerwijs exploratief van karakter, waarbij we zo transparant mogelijk proberen aan te geven wat we met onze zoekacties aantroffen. Zoals bij alle grote databanken is het op voorhand niet duidelijk wat DCN precies bevat, en bij een zo omvangrijk corpus is dat ook niet intuïtief te doorgronden door wat te bladeren of ongericht te zoeken.<a href="#_ftn14" name="_ftnref14">[14]</a> Een systeem als DCN heeft daarnaast specifieke problemen, die de meer ervaren onderzoeker soms kan ondervangen met een slimme zoekstrategie. De charterbank geeft bijvoorbeeld 3.350 charters als zoekresultaten vóór 1300, maar bij nadere inspectie blijkt dat zich hierin ook onjuist gedateerde charters bevinden. Dergelijke fouten zijn vaak te herleiden tot verkeerde aannames bij het invullen van de data, ofwel handmatig door de archiefdiensten, dan wel automatisch door het systeem van DCN. Niet of incorrect gedateerde charters krijgen in het systeem een automatisch gegenereerd ‘jaartal’, vaak gebaseerd op een in de betreffende beschrijving gevonden viercijferig getal, zoals een geldbedrag, een oppervlaktemaat, een inventaris- of regestnummer of een jaartal uit de naam van de archiefinventaris dat toevallig overeenkomt met de elfde of twaalfde eeuw.<a href="#_ftn15" name="_ftnref15">[15]</a> Dit dateringsprobleem is deels te ondervangen door te zoeken op 1101 tot 1299, met vermijding van ‘ronde’ getallen, die relatief vaak voorkomen in andere functies dan een jaartal. Het aantal resultaten komt dan neer op 3.134. Als we bij de dertiende eeuw aankomen (zoek op 1201-1299) geven de eerste tien pagina’s (tweehonderd documenten) ruim vijftig ‘goede’ resultaten. Vooral bij de oudere charters, ruwweg van vóór 1300, moeten gebruikers rekening houden met dit dateringsprobleem. DCN geeft de indruk dat de datering in latere perioden veel beter is. Steekproeven in charters uit de periode 1550-1565 wijzen uit dat daar ongeveer tien procent van de stukken niet uit deze jaren stamt. Gelukkig is bij inspectie van de afzonderlijke documenten zelf in DCN de correcte datering vrijwel steeds onmiddellijk duidelijk.
+Een kwantitatieve analyse leert dat er in totaal 91 archiefdiensten zijn vertegenwoordigd in DCN, met een gemiddeld aantal charters van 1.959. Het grootste aantal heeft Het Utrechts Archief met 25.730 charters (14,4 procent van het totale aantal), gevolgd door het Gelders Archief (20.942 stuks), de Groninger Archieven (17.346), het Nationaal Archief (15.367) en het Brabants Historisch Informatie Centrum (12.366). Tabel 1 vat de verdeling van charters over de verschillende archiefdiensten samen.</p>
+<p><label>Tabel 1.</label></p>
+<caption><p>Overzicht van de verdeling van charters over verschillende archiefdiensten.</p></caption>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aantal charters</p></th>
+<th class="head"><p>Aantal diensten</p></th>
+<th class="head"><p>Totaal aantal charters</p></th>
+<th class="head"><p>Procent</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&gt; 20.000</p></td>
+<td><p>2</p></td>
+<td><p>46.629</p></td>
+<td><p>26</p></td>
+</tr>
+<tr class="row-odd"><td><p>10.000-20.000</p></td>
+<td><p>3</p></td>
+<td><p>45.079</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-even"><td><p>5.000-10.000</p></td>
+<td><p>4</p></td>
+<td><p>28.794</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.000-5.000</p></td>
+<td><p>13</p></td>
+<td><p>45.687</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-even"><td><p>100-1.000</p></td>
+<td><p>30</p></td>
+<td><p>11.124</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;100</p></td>
+<td><p>32</p></td>
+<td><p>941</p></td>
+<td><p>0,5</p></td>
+</tr>
+</tbody>
+</table>
+<p>De diensten herbergen elk vele archieffondsen met uiteenlopende aantallen charters. In totaal gaat het momenteel om 4.057 fondsen met elk gemiddeld 87 charters, verdeeld zoals aangegeven in tabel 2. De vijf grootste fondsen zijn de Ridderlijke Duitsche Orde, Balije van Utrecht (4.409 charters), het Kapittel van Sint Marie te Utrecht (3.726), het Domkapittel te Utrecht (2.485), het Stadsbestuur van Zwolle (2.477) en Graven en hertogen van Gelre, graven van Zutphen (1.877). Er zijn vooral heel veel kleine fondsen: ongeveer de helft heeft vijf of minder charters en daarvan bevatten er zo’n duizend slechts één enkel charter.</p>
+<p><label>Tabel 2.</label></p>
+<caption><p>Overzicht van de verdeling van charters over verschillende archieffondsen.</p></caption>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aantal charters</p></th>
+<th class="head"><p>Aantal fondsen</p></th>
+<th class="head"><p>Totaal aantal charters</p></th>
+<th class="head"><p>Procent</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1.001-4.409</p></td>
+<td><p>27</p></td>
+<td><p>39.784</p></td>
+<td><p>22</p></td>
+</tr>
+<tr class="row-odd"><td><p>501-1.000</p></td>
+<td><p>42</p></td>
+<td><p>28.375</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>201-500</p></td>
+<td><p>128</p></td>
+<td><p>39.938</p></td>
+<td><p>22</p></td>
+</tr>
+<tr class="row-odd"><td><p>101-200</p></td>
+<td><p>156</p></td>
+<td><p>22.415</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-even"><td><p>21-100</p></td>
+<td><p>728</p></td>
+<td><p>32.561</p></td>
+<td><p>18</p></td>
+</tr>
+<tr class="row-odd"><td><p>11-20</p></td>
+<td><p>469</p></td>
+<td><p>7.081</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>6-10</p></td>
+<td><p>467</p></td>
+<td><p>3.539</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1-5</p></td>
+<td><p>2.039</p></td>
+<td><p>4.180</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Periode</p></th>
+<th class="head"><p>Aantal charters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1001-1100</p></td>
+<td><p>247</p></td>
+</tr>
+<tr class="row-odd"><td><p>1101-1200</p></td>
+<td><p>565</p></td>
+</tr>
+<tr class="row-even"><td><p>1201-1300</p></td>
+<td><p>2.482</p></td>
+</tr>
+<tr class="row-odd"><td><p>1301-1400</p></td>
+<td><p>16.401</p></td>
+</tr>
+<tr class="row-even"><td><p>1401-1500</p></td>
+<td><p>42.545</p></td>
+</tr>
+<tr class="row-odd"><td><p>1501-1600</p></td>
+<td><p>45.986</p></td>
+</tr>
+<tr class="row-even"><td><p>1601-1700</p></td>
+<td><p>42.214</p></td>
+</tr>
+<tr class="row-odd"><td><p>1701-1800</p></td>
+<td><p>36.874</p></td>
+</tr>
+</tbody>
+</table>
+<p>De identiteit van de archiefvormers met charters in de collectie betreft in 885 gevallen een ‘gemeente’, zowel seculier als kerkelijk, en nog 79 maal een ‘parochie’. Daarnaast zijn er 584 archieffondsen met het woord ‘familie’ en 150 met het woord ‘huis’. In de lijst van meest algemene termen met betrekking tot de fondsen vinden we verder ‘klooster’ (81), ‘heerlijkheid’ (78) en ‘schepenbank’ (59).
+Grafiek 1 toont een overzicht van het aantal charters per jaar. Over acht eeuwen is het jaarlijkse gemiddelde ongeveer 222, overeenkomend met circa 0,61 charters per dag. Voor de vijftiende tot en met de achttiende eeuw (een periode waarin de dateringen in DCN redelijk lijken te kloppen) zijn het er ruim één tot circa vier per dag. Het is natuurlijk inzichtelijker om te kijken naar het verloop van de aantallen in de tijd. Zie daartoe ook tabel 3, met de aantallen uitgesplitst per eeuw. Het is duidelijk dat ‘Nederlandse’ charters pas vanaf het midden van de dertiende eeuw in enige aantallen zijn overgeleverd.<a href="#_ftn16" name="_ftnref16">[16]</a> Na 1300 gaat de curve steil omhoog, waarna vanaf het midden van de vijftiende tot het derde kwart van de zeventiende eeuw de jaarlijkse aantallen vaak boven de 1.000 stuks liggen. Oorkonden zijn dus zeker geen uniek middeleeuws fenomeen en komen gedurende het gehele <em>ancien régime</em> nog steeds algemeen voor. Kort na 1800 houdt de oorkonde als administratief document abrupt op te bestaan.<a href="#_ftn17" name="_ftnref17">[17]</a> Opvallend in de grafiek is een dip in het derde kwart van de zestiende eeuw, die verklaard zou kunnen worden door de Opstand, een periode waarin bestuurlijke activiteiten op een laag pitje kwamen te staan. Een verklaring van de duidelijke inzinking van de aantallen charters in het eerste kwart van dezelfde eeuw is evenwel niet zomaar te geven. Duidelijk is dat dit rijke corpus oorkonden van na 1300, en vooral die in de vroegmoderne tijd, voor historische onderzoekers een nog goeddeels onontgonnen bron vormt.</p>
+<p><img alt="Image" src="figures/bmgn-lchr.6997_fig4.jpg" /></p>
+<p>Daarnaast onthult de grafiek problemen in DCN. Enkele onwaarschijnlijke uitschieters van meer dan 100 charters per jaar vóór 1250 zijn toe te schrijven aan de eerder genoemde fouten in de datering, met name in de documenten van vóór 1300. Deze uitschieters vallen meteen op, maar we zagen dat ook in latere perioden de dateringen in DCN een bepaalde, zij het veel lagere, foutmarge vertonen. Hiermee moet de onderzoeker wel rekening houden bij het zoeken op datum; het verdient de aanbeveling om niet blind op de gegeven dateringen te varen. Al met al geeft de grafiek een goede indruk van de algemene verdeling van de aantallen charters per jaar.
+Deze aantallen Nederlandse oorkonden over een periode van acht eeuwen doen de vraag rijzen naar de <em>inhoud</em> van die documenten. Die vraag is voor 180.000 charters niet zo eenvoudig te beantwoorden, gezien het brede scala aan onderwerpen dat erin wordt behandeld. De digitale data maken het wel mogelijk een eerste globale schets te geven van mogelijke verschuivingen in onderwerpen in de tijd, de aard van de rechtshandelingen, en de verdeling over de stad en het platteland. Daartoe is een systematische steekproef genomen door van 1005 tot 1850 om de tien jaar de charters op te vragen van een heel jaar. Van de woorden uit de omschrijvingen is een frequentieverdeling gemaakt en op basis daarvan zijn een aantal verzameltermen samengesteld met verwante woorden. Tenslotte is het frequentieverloop in de tijd geanalyseerd.<a href="#_ftn18" name="_ftnref18">[18]</a>
+Het resultaat is uiteengezet in een achttal grafieken, waarin de cumulatieve aantallen zijn weergegeven per halve eeuw. Voor de vergelijkbaarheid is de schaal van de hoeveelheden gelijk gehouden. Zoals te verwachten was, komen door de archivaris in de beschrijvingen toegekende archieftermen, zoals ‘charter(s)’ en ‘akte’, het vaakst voor.<a href="#_ftn19" name="_ftnref19">[19]</a> Deze passen niet eens in de standaardschaal en komen over de gehele periode terug. Iets soortgelijks geldt voor auteursnamen en boektitels die verwijzen naar bestaande oorkondenedities.
+Een analyse van de meer inhoudelijke termen moet noodgedwongen oppervlakkig blijven, maar in het volgende zijn enkele voorbeelden nader geschetst. ‘Land’ en gerelateerde termen komen altijd veel voor. ‘Kerk’ en verwante termen zoals ‘bisschop’, ‘abt’, en ‘klooster’ zien we vooral vaak tot de zestiende eeuw, nadien veel minder. Termen die betrekking hebben op het leenstelsel komen gedurende de acht eeuwen regelmatig voor. ‘Leen’ geeft weliswaar slechts 2.450 resultaten, maar ‘<em>leen’ en ‘leen</em>’ (die bijvoorbeeld <em>erfleen, dienstleen, mansleen, leenbrief, leenman</em> en <em>leenhulde</em> opleveren – evenals trouwens <em>alleen</em> en <em>Geleen</em>) leveren nog eens 12.945 respectievelijk 10.916 hits op. De termen ‘pacht’ en ‘rente’ (en verwante) komen meer voor in de middeleeuwse periode, terwijl ‘koop’ duidelijk het meest gevonden wordt in de vroegmoderne tijd. Termen rond het begrip ‘benoeming’ zien we steeds vaker naarmate de tijd vordert.<a href="#_ftn20" name="_ftnref20">[20]</a></p>
+<p><img alt="Image" src="figures/bmgn-lchr.6997_fig5.jpg" /></p>
+<p>Deze ruwe resultaten geven al aanleiding tot enkele interessante observaties, bijvoorbeeld wat betreft de temporele begrenzing van begrippen. Zo blijkt dat het leenstelsel ook in de vroegmoderne tijd werkzaam bleef. Dit is voor de kenners geen verrassing, maar wordt fraai bevestigd in DCN. Verder zien we dat men transacties van onroerend goed na 1600 bleef vastleggen in de vorm van oorkonden, ondanks het massale gebruik van de notariële akte, die overigens vaak alleen werd opgetekend in notarisprotocollen en dus niet in DCN is te vinden.<a href="#_ftn21" name="_ftnref21">[21]</a> De stijging van het aantal charters met benoemingen reflecteert de trend om dergelijke ambtelijke handelingen steeds meer in officiële akten vast te leggen, hetgeen samenhangt met de algemene groei van de bestuurlijke verschriftelijking.</p>
+</section>
+<section id="voorbeelden-van-mogelijkheden-tot-nader-inhoudelijk-onderzoek">
+<h2>Voorbeelden van mogelijkheden tot nader inhoudelijk onderzoek<a class="headerlink" href="#voorbeelden-van-mogelijkheden-tot-nader-inhoudelijk-onderzoek" title="Permalink to this heading">#</a></h2>
+<p>Ter illustratie zullen we enkele willekeurige casussen nader uitwerken. Daarbij onderzoeken we achtereenvolgens een familienaam en persoon, een plaatsnaam en een straatnaam, en een specifieke term betreffende bezitsverhoudingen, namelijk erfpacht.</p>
+</section>
+<section id="brederode">
+<h2>Brederode<a class="headerlink" href="#brederode" title="Permalink to this heading">#</a></h2>
+<p>Het adellijk geslacht Van Brederode speelde van de dertiende tot zeventiende eeuw een prominente rol in Holland. Zoeken op deze naam levert 447 resultaten op, en nog eens 21 treffers op de archaïsche schrijfwijzen ‘Brederoede’ en ‘Bredero’, dit alles uit de periode 1248-1793. Een deel van de vindplaatsen heeft niet zozeer betrekking op de familie als wel op het gelijknamige toponiem, maar de meeste betreffen inderdaad diverse leden van het geslacht, of in ieder geval personen met de naam ‘van Brederode’. In DCN kan vervolgens in één oogopslag worden bekeken in welke instellingen die gevonden oorkonden bewaard zijn. Zo is te zien dat leden van dit Hollandse geslacht over het hele land archivalia hebben nagelaten. De stukken zijn aangetroffen in maar liefst 27 archiefinstellingen, met de meeste documenten in het Nationaal Archief (154 stuks), het Utrechts Archief (138), het Noord-Hollands Archief (62) en het Gelders Archief (32). Zonder DCN zou de onderzoeker daar waarschijnlijk toch wel zijn gaan zoeken, maar hij of zij zou misschien niet zo gauw zijn gestuit op de unieke oorkonden in de archieven in Groningen, Leeuwarden, Hoorn, Wassenaar, Woerden, Den Haag, Vlaardingen, Middelharnis, Middelburg, Tilburg, Tiel, Harderwijk, Delden en Maastricht.<a href="#_ftn22" name="_ftnref22">[22]</a> De zoekactie kan natuurlijk ook worden toegespitst op een bepaalde persoon, bijvoorbeeld op Jan van Brederode (1390-1415), de edelman waaraan Frits van Oostrom recent een boek heeft gewijd. De combinatie van ‘Jan’ en ‘Brederode’ in het zoekscherm levert 98 resultaten op, maar het merendeel daarvan heeft geen betrekking op de persoon Jan van Brederode (de eerste treffer handelt bijvoorbeeld over Jan van Montfoort en zijn vrouw Carola van Brederode). Er kan echter ook direct worden gezocht op “Jan van Brederode” (met dubbele aanhalingstekens), en zo vinden we twee oorkonden die betrekking hebben op deze persoon. Een van die twee stukken wordt in Van Oostroms studie inderdaad genoemd, maar het andere ontbreekt daarin.<a href="#_ftn23" name="_ftnref23">[23]</a></p>
+</section>
+<section id="plaatsnamen">
+<h2>Plaatsnamen<a class="headerlink" href="#plaatsnamen" title="Permalink to this heading">#</a></h2>
+<p>Evenzo kan natuurlijk worden gekeken naar een bepaalde plaats. Om een willekeurig voorbeeld te nemen: Wijchen, eertijds een klein dorp ten zuidwesten van Nijmegen. Zoeken op dat toponiem, en natuurlijk op historische varianten zoals ‘Wychen’, ‘Wichen’, en ‘Wijchgen’, levert 93 hits op voor de periode 1369-1724. De meeste vindplaatsen komen, niet verassend, uit het Gelders Archief en het Regionaal Archief Nijmegen, maar incidentele gevallen worden ver verwijderd aangetroffen, van het Nationaal Archief tot het Regionaal Historisch Centrum Limburg. We vinden diverse personen die ‘van Wijchen’ heten, evenals vermeldingen van de plaatselijke kerk (in 1491; het kerspel wordt genoemd in 1369), het huis ‘de Liliart’, en diverse buurt-, straat- en veldnamen.
+Toponymisch onderzoek in DCN levert veel op, natuurlijk vooral in een grotere plaats. Wanneer we de plaatsnaam Leiden combineren met de woorden ‘straat’, ‘steeg’, ‘gracht’, ‘brug’, ‘poort’ (ook met een asterisk voor eventuele voorvoegsels: ‘*straat’, ‘*steeg’, et cetera), dan komen we op 1566 resultaten. Hierin moet nog wel duchtig worden gewied, aangezien er veel verdubbelingen zijn en ook straatnamen buiten Leiden af en toe voorkomen. Met deze resultaten kan de onderzoeker niettemin vooruit. Aardig in dit verband is bovendien onderzoek naar de verbreiding van een specifieke straatnaam. Een ‘Peperstraat’ wordt gevonden in vijftien steden en dorpen (71 hits, uit de periode 1326-1804), terwijl Rotterdam en Vlaardingen een Pepersteeg hebben (7 hits, meeste uit de achttiende eeuw) en Nijmegen een Pepergas (7 hits, meeste uit de zestiende eeuw).<a href="#_ftn24" name="_ftnref24">[24]</a></p>
+</section>
+<section id="erfpacht">
+<h2>Erfpacht<a class="headerlink" href="#erfpacht" title="Permalink to this heading">#</a></h2>
+<p>Ter afsluiting diepen we een historische term verder uit met behulp van DCN. Daartoe is het verschijnsel ‘erfpacht’ gekozen. In zijn historische context duidt ‘erfpacht’ op de verpachting van goed, veelal agrarische gronden, tegen een vastgestelde pacht (ook wel cijns of tijns genoemd), waarbij de pacht van de pachter overgaat op diens erfgenaam. Daarin verschilt erfpacht dus van de zogenoemde tijd- of termijnpachten, zoals lijfpacht (een overeenkomst voor het leven van de pachter) of jaarpacht (een overeenkomst voor de periode van een jaar).<a href="#_ftn25" name="_ftnref25">[25]</a>
+Zoeken naar de term ‘erfpacht’ in DCN levert 4.238 resultaten op, 2,4 procent van alle oorkonden in DCN.<a href="#_ftn26" name="_ftnref26">[26]</a> In tabel 4 staan de treffers uitgesplitst per eeuw, inclusief het betreffende percentage ‘erfpacht’-oorkonden.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Periode</p></th>
+<th class="head"><p>Aantal ‘erfpacht’</p></th>
+<th class="head"><p>Percentage ‘erfpacht’</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1100-1300</p></td>
+<td><p>95</p></td>
+<td><p>3,2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1301-1400</p></td>
+<td><p>538</p></td>
+<td><p>3,4</p></td>
+</tr>
+<tr class="row-even"><td><p>1401-1500</p></td>
+<td><p>1.655</p></td>
+<td><p>3,9</p></td>
+</tr>
+<tr class="row-odd"><td><p>1501-1600</p></td>
+<td><p>1.072</p></td>
+<td><p>2,4</p></td>
+</tr>
+<tr class="row-even"><td><p>1601-1700</p></td>
+<td><p>744</p></td>
+<td><p>1,8</p></td>
+</tr>
+<tr class="row-odd"><td><p>1701-1800</p></td>
+<td><p>491</p></td>
+<td><p>1,3</p></td>
+</tr>
+<tr class="row-even"><td><p>Totaal</p></td>
+<td><p>4595</p></td>
+<td><p>2,5</p></td>
+</tr>
+</tbody>
+</table>
+<p>Het optredende verschil tussen de totalen in DCN en in de optelling per eeuw is een gevolg van de eerder gesignaleerde gebrekkig of niet gedateerde oorkonden in de door de instellingen aangeleverde data, waardoor records soms dubbel zijn geteld.<a href="#_ftn27" name="_ftnref27">[27]</a> Zoeken op de termen voor de twee typen termijnpacht leverde naar verhouding vrijwel niets op. ‘Lijfpacht’ gaf 31 treffers (periode 1260-1615),<a href="#_ftn28" name="_ftnref28">[28]</a> en ‘jaarpacht’ gaf 69 treffers (1331-1616). De variant ‘jaarhuur’ gaf één resultaat, in 1407. Deze uitkomst was op voorhand wel te verwachten. Akten waarin een erfpacht was vastgelegd waren in principe voor altijd geldig en moesten dus zorgvuldig worden bewaard (en werden voorts door instituties afgeschreven in hun registers en cartularia), terwijl de akten betreffende termijnpachten na afloop van de vastgestelde periode hun waarde verloren en zo vrijwel niet bewaard zijn gebleven.<a href="#_ftn29" name="_ftnref29">[29]</a> De term ‘erfcijns’ leverde wél treffers op, te weten 1.559 stuks,<a href="#_ftn30" name="_ftnref30">[30]</a> en de verspreiding over de eeuwen verloopt parallel aan die van de erfpacht zoals getoond in tabel 4: vóór 1300 0,4 procent, in de veertiende eeuw 1,4 procent, in de vijftiende eeuw 1,6 procent, in de zestiende eeuw 1,0 procent, in de zeventiende eeuw 0,7 procent en in de achttiende eeuw 0,03 procent.</p>
+<p><img alt="Image" src="figures/bmgn-lchr.6997_fig3.jpg" /></p>
+<p>Erfpachtoorkonden zijn aangetroffen in 586 verschillende archieffondsen, variërend van één akte (in 241 gevallen) tot 220 aktes (in het Utrechtse kapittel van Sint Marie). Deze stukken worden voornamelijk in de archieven van geestelijke instellingen bewaard. Acht van de tien archieven met de meeste erfpachtoorkonden blijken kerkelijk te zijn, te weten het eerder genoemde kapittel van Sint Marie (220), de Nijmeegse broederschappen (155 stuks), het Utrechtse kapittel van Sint Pieter (132) en het Utrechtse Domkapittel (113), die elk meer dan honderd oorkonden hebben.<a href="#_ftn31" name="_ftnref31">[31]</a> In de top tien vinden we slechts twee niet-geestelijke archieven, namelijk het rechterlijk archief van Tiel en Zandwijk (86 stuks) en de charters behorend tot, of in bewaring gegeven bij, het stadsbestuur van Utrecht afdelingen I en II, met respectievelijk 84 en 98 stuks. In die laatste collectie is, afgezien van de gildenarchieven, het grootste deel van de stukken eveneens afkomstig uit religieuze instellingen, zoals broederschappen, kloosters, gods- en gasthuizen, en fundaties.<a href="#_ftn32" name="_ftnref32">[32]</a> Hierbij moet worden aangetekend dat juist de kerkelijke archieven relatief goed zijn overgeleverd, terwijl die van seculiere instellingen, en vooral die van particulieren, vaak flinke gaten vertonen, zo ze al zijn bewaard.
+Uit het bovenstaande blijkt dat de Utrechtse archieven zeer goed zijn vertegenwoordigd, en dus is er reden om per archiefinstelling te kijken naar de aantallen erfpachtoorkonden. Dit geeft een eerste inzicht in de regionale verspreiding van de historische erfpacht, aangezien de meeste instellingen grotendeels de archieven uit de eigen regio bevatten.<a href="#_ftn33" name="_ftnref33">[33]</a> We vergelijken daartoe de regionale archieven met de grootste aantallen erfpachtoorkonden, waarmee ruwweg respectievelijk Zuid-Holland, Utrecht, Noord-Brabant, het (oostelijk) Gelders rivierengebied, de rest van Gelderland, Limburg en Drenthe zijn afgedekt. In tabel 5 zijn voor deze instellingen de aantallen erfpachtakten per eeuw naast elkaar gezet als percentage van het totale aantal oorkonden per archiefdienst per eeuw.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Periode</p></th>
+<th class="head"><p>na</p></th>
+<th class="head"><p>hua</p></th>
+<th class="head"><p>bhic</p></th>
+<th class="head"><p>ran</p></th>
+<th class="head"><p>ga</p></th>
+<th class="head"><p>rhcl</p></th>
+<th class="head"><p>da</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1100-1300</p></td>
+<td><p>1,2</p></td>
+<td><p>5,5</p></td>
+<td><p>0,7</p></td>
+<td><p>0</p></td>
+<td><p>2,9</p></td>
+<td><p>2,1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1301-1400</p></td>
+<td><p>1,6</p></td>
+<td><p>4,8</p></td>
+<td><p>5,3</p></td>
+<td><p>5,1</p></td>
+<td><p>1,7</p></td>
+<td><p>4,2</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>1401-1500</p></td>
+<td><p>1,5</p></td>
+<td><p>6,2</p></td>
+<td><p>9,2</p></td>
+<td><p>14,2</p></td>
+<td><p>1,8</p></td>
+<td><p>4,4</p></td>
+<td><p>1,6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1501-1600</p></td>
+<td><p>2,2</p></td>
+<td><p>4,3</p></td>
+<td><p>4,8</p></td>
+<td><p>7,0</p></td>
+<td><p>1,1</p></td>
+<td><p>2,2</p></td>
+<td><p>1,5</p></td>
+</tr>
+<tr class="row-even"><td><p>1601-1700</p></td>
+<td><p>1,4</p></td>
+<td><p>4,7</p></td>
+<td><p>1,4</p></td>
+<td><p>0,1</p></td>
+<td><p>1,5</p></td>
+<td><p>0,8</p></td>
+<td><p>2,8</p></td>
+</tr>
+<tr class="row-odd"><td><p>1701-1800</p></td>
+<td><p>1,5</p></td>
+<td><p>5,6</p></td>
+<td><p>0,7</p></td>
+<td><p>0,04</p></td>
+<td><p>0,7</p></td>
+<td><p>0,3</p></td>
+<td><p>1,4</p></td>
+</tr>
+<tr class="row-even"><td><p>Totaal</p></td>
+<td><p>1,6</p></td>
+<td><p>5,0</p></td>
+<td><p>5,1</p></td>
+<td><p>7,1</p></td>
+<td><p>1,3</p></td>
+<td><p>4,9</p></td>
+<td><p>1,7</p></td>
+</tr>
+</tbody>
+</table>
+<p>De tabel biedt enkele interessante aanknopingspunten voor toekomstig onderzoek naar ‘Erfpacht in Nederland 1100-1800’. Zo lijkt het erop dat het systeem van erfpacht in het westen en noorden van het land aanzienlijk minder verbreid was dan in het midden en zuiden. Opmerkelijk is dat Nijmegen en omgeving relatief de meeste erfpachten kent, terwijl de rest van Gelderland (in casu de Veluwe en de Achterhoek) juist het laagste cijfer te zien geven. Nader onderzoek zal moeten uitwijzen of het hier inderdaad gaat om regionale verschillen in de verbreiding van de erfpacht, of dat de gevonden variaties slechts verschillen in de manier van optekening en/of archivering weerspiegelen. Het grote verschil van de deels overlappende regio’s van RAN en GA maakt die laatste mogelijkheid op voorhand echter minder waarschijnlijk.
+Uit de cijfers kan worden afgeleid dat de veertiende en vijftiende eeuw in veel gebieden het hoogtepunt vormden van het erfpachtsysteem,<a href="#_ftn34" name="_ftnref34">[34]</a> terwijl in de regio’s met een lagere erfpachtverbreiding dat hoogtepunt juist later lag: in Zuid-Holland in de zestiende eeuw en in Drenthe zelfs pas in de zeventiende eeuw. Andere gebieden laten in de zeventiende en achttiende eeuw een duidelijke daling van de aantallen erfpachtoorkonden zien, hoewel opmerkelijk genoeg in Utrecht de aantallen ook in die latere periode min of meer gelijk blijven en nauwelijks onderdoen voor de middeleeuwse cijfers. Verder kan worden verondersteld dat de relatief geringe erfpachtdichtheid van Zuid-Holland veroorzaakt zou kunnen zijn doordat juist hier de geestelijke instellingen achterbleven bij de uitgifte ervan: van de aantallen erfpachten in NA blijkt slechts 10 procent bewaard in kerkelijke archieven. De rest is bewaard in de archieven van diverse adellijke families, met name in het rijke archief van de Nassause Domeinraad, en van seculiere instituties zoals het Hof van Holland en de Ridderschap van de Hollandse Staten.<a href="#_ftn35" name="_ftnref35">[35]</a>
+Hierbij past de waarschuwing dat deze resultaten niet meer kunnen zijn dan een eerste indicatie van de verspreiding van de erfpacht. De gevonden aantallen zijn deels te gering om verantwoorde conclusies te trekken en zij worden bovendien vervuild door de eerdergenoemde beperkingen van het systeem van DCN. De onderzoeker kan (en moet) de resultaten handmatig controleren. Zo blijkt bij nadere inspectie bijvoorbeeld dat van de 66 oorkonden in HUA van vóór 1300 in werkelijkheid slechts zeventien stuks dateren uit de dertiende eeuw, waarmee het percentage uitkomt op een meer ‘normale’ 1,5 procent. De overige 49 stuks dienen derhalve over de volgende eeuwen herverdeeld te worden. In het kader van de onderhavige test van de mogelijkheden van DCN is een dergelijke handmatige correctie niet uitgevoerd.
+Vervolgens kan in DCN wat dieper worden ingezoomd op de zoekresultaten, dankzij de informatie die wordt gevonden in de beschrijvingen en regesten. Daaruit blijkt dat in verreweg de meeste gevallen, zelfs al in de veertiende eeuw, er in de stukken niet zozeer sprake is van de vestiging van een erfpacht op een stuk land,<a href="#_ftn36" name="_ftnref36">[36]</a> maar eerder van de overdracht van de inkomsten uit een erfpacht. Het gaat hier dus eigenlijk om de erftijns die, naar nu blijkt, meestal zelf ook ‘erfpacht’ wordt genoemd, ofwel ‘rente’.<a href="#_ftn37" name="_ftnref37">[37]</a> Dit is bijvoorbeeld het geval in een oorkonde uit 1338, omschreven als ‘Akte van transport door Willem Koenenzoon en zijn vrouw Korstiin aan Danyel van den Bossche van de erfpacht van een huis en hofstede in de [Utrechtse] Smeesteeg’.<a href="#_ftn38" name="_ftnref38">[38]</a> Uit die oorkonde, en honderden andere, wordt duidelijk dat erfpacht niet alleen in agrarische gebieden voorkwam, maar eveneens veelvuldig in steden, waar ook huizen in erfpacht werden uitgegeven.<a href="#_ftn39" name="_ftnref39">[39]</a> Voorts blijkt dat niet alleen onroerend goed als erfpachten werden overgedragen, maar ook tienden en bepaalde rechten,<a href="#_ftn40" name="_ftnref40">[40]</a> en dat de pachtsom, of een gedeelte ervan, veelvuldig in natura moest worden voldaan.<a href="#_ftn41" name="_ftnref41">[41]</a> Betaling van de pachtsom in natura was gunstig voor de verpachter: anders dan een gefixeerde geldsom zijn twee vaten rogge per jaar niet onderhevig aan inflatie.<a href="#_ftn42" name="_ftnref42">[42]</a>
+Een en ander verklaart waarom de erfpacht zo veelvuldig en zo lang figureert in het oorkondenmateriaal. Nadat een perceel of huis eenmaal in erfpacht was uitgegeven kon de pachtopbrengst, die immers eeuwig bleef bestaan, steeds weer aan partijen worden overgedragen, bijvoorbeeld als onderpand of ter aflossing van een schuld. En inderdaad blijken erfpachtoorkonden uit de zestiende, zeventiende en achttiende eeuw vaak overdracht van renten uit – meestal stedelijke – erfpachten, hoewel nieuwe uitgiften van percelen in erfpacht nog steeds blijven voorkomen.<a href="#_ftn43" name="_ftnref43">[43]</a>
+Uit zo’n eerste verkenning blijkt dat DCN de onderzoeker in korte tijd, en met weinig moeite, een flink stuk op weg kan helpen. Natuurlijk zal bij diepgravender onderzoek de tocht naar de archieven moeten worden gemaakt om de gevonden stukken zelf te bestuderen en ter aanvulling van het onderzoekscorpus met relevante stukken die niet in DCN staan, zoals transportregisters van onroerend goed of cartularia met afschriften van oorkonden.</p>
+</section>
+<section id="mogelijkheden-van-dcn-en-methodische-reflectie">
+<h2>Mogelijkheden van DCN en methodische reflectie<a class="headerlink" href="#mogelijkheden-van-dcn-en-methodische-reflectie" title="Permalink to this heading">#</a></h2>
+<p>De bovenstaande voorbeelden mogen duidelijk maken dat DCN nieuwe mogelijkheden opent voor de historische onderzoeker, zowel de professional als de amateur. De hierboven beschreven voorbeelden laten zien dat in het geval van onderzoek met DCN er eigenlijk geen sprake is van een dichotomie tussen het traditionele vraaggestuurde historisch onderzoek en een datagestuurde methode zoals die als vanzelf voort zou vloeien uit het gebruik van grote datacomplexen.<a href="#_ftn44" name="_ftnref44">[44]</a> Het automatisch genereren van een cijfermatige analyse van de inhoud van DCN, zoals de frequentieverdelingen van de meest voorkomende woorden per periode, is een voorbeeld van een data-georiënteerde aanpak. Het voorkomen van bepaalde termen door de eeuwen heen laat meteen zien dat de combinatie van beide methoden niet alleen uitstekend werkt, maar ook noodzakelijk is. Uitgaand van een specifieke vraag, zoals de ontwikkeling van het leenstelsel, leveren <em>big data</em> binnen enkele minuten een eerste inzicht. De onderzoeker blijft er wel mee aan de buitenkant. Bovendien zijn de data vaak nog wat vervuild en is het niet duidelijk wat ze precies betekenen. De automatische resultaten zijn daarmee niet zozeer kant-en-klare onderzoeksuitkomsten, maar veeleer een halffabricaat voor analyse en verder onderzoek. De verder uitgewerkte voorbeelden van Van Brederode en erfpacht maken duidelijk dat het in DCN mogelijk is om voortgezet onderzoek te verrichten naar een bepaald onderwerp, zowel lokaal en qua tijd in de diepte als over de breedte voor de <em>longue durée</em>. Andersom maakt DCN het mogelijk specifiek onderzoek, waarin enkele oorkonden of bijvoorbeeld een persoon, familie, of een plaats als uitgangspunt worden genomen, met data-georiënteerde methoden eenvoudig in breder perspectief te plaatsen.
+Naarmate de dataverzamelingen groter en complexer worden, wordt het belangrijker transparant te zijn over de methoden die worden gebruikt en daarover te rapporteren.<a href="#_ftn45" name="_ftnref45">[45]</a> In methodologisch opzicht stelt dit de onderzoeker voor een aantal opgaven die voor een deel met de digitale aard van het materiaal samenhangen, maar tegelijkertijd eigenlijk een verlengstuk zijn van de traditionele historische bronnenkritiek. DCN bevat als samengesteld instrument alle hiaten en eigenaardigheden waar de archiefonderzoeker altijd al op bedacht moest zijn. Archieven zijn geheel of gedeeltelijk verloren gegaan en mensen en instellingen uit het verleden bewaarden vooral wat ze zelf als waardevol beschouwden. Omdat DCN alle beschikbare materiaal bijeenbrengt wordt dit bezwaar soms ondervangen doordat verspreide gegevens bij elkaar een completer corpus vormen. Voorheen verspreide akten geven elkaar zo context en deelcollecties die uit het ene archief zijn overgeleverd roepen vragen op over het gebrek aan gegevens uit andere archieven.<a href="#_ftn46" name="_ftnref46">[46]</a> Wat is er zo uniek aan de ene collectie ten opzichte van de andere? Is het toeval of zit er meer achter? Dit zijn zomaar enkele vragen die met het panorama van DCN beantwoord zouden kunnen worden.
+De ‘oude’ kwesties van bronnenkritiek hebben ook een digitaal verlengstuk. Hierover schrijft de Amerikaanse historicus Jo Guldi het volgende:</p>
+<p>Understanding digital algorithms as having this perspectival ability to open up different dimensions of an archive reminds us that no search is complete until all of its aspects – the choice of keywords, the algorithm, the exceptions, and the particular texts taken as exemplary evidence of the result – have been subjected to iterative examination.<a href="#_ftn47" name="_ftnref47">[47]</a>
+Grote dataverzamelingen als DCN maken weliswaar vormen van ‘data-gedreven onderzoek’ mogelijk, maar ze moeten wel met verstand gebruikt worden. Het historisch handwerk kan dus zeker niet worden overgeslagen.
+Voor DCN wezen we er al op dat de context van de inventarissen veranderd is, soms oude toegangen hun link met de inventarisbeschrijvingen hebben verloren, en welke consequenties dat heeft voor de navigatiemogelijkheden van de databank.<a href="#_ftn48" name="_ftnref48">[48]</a> Er zijn echter ook enkele structurele kenmerken die databases onderscheiden van papieren bronnen.<a href="#_ftn49" name="_ftnref49">[49]</a> Databases bevatten per definitie gestructureerde data, maar de structuur is een model dat is opgelegd aan de onderliggende gegevens en daarmee een abstractie. In het geval van DCN gaat het zelfs om een dubbele abstractie, want de beschrijvingen zijn vaak lang geleden al vervaardigd op papier en vervolgens gedigitaliseerd. In DCN is de doorzoekbare structuur bewust heel eenvoudig gehouden omdat we enerzijds zoveel mogelijk charters wilden opnemen en anderzijds afhankelijk waren van bestaande beschrijvingen die niet zomaar kunnen worden uitgebreid.
+In onze onderzoeksvoorbeelden is aangegeven dat zelfs deze heel beperkte structurering van de oorkonden tot rafelranden leidt. Dateringen zijn onzeker en de wijze van beschrijven in de inventaris is veelal afgeleid van de papieren vorm die weliswaar al gestandaardiseerd was, maar toch veel toleranter voor variatie is dan de rigide databasevorm. Hier en daar zijn in de database wel uitgebreidere beschrijvingen beschikbaar zoals de uitvaardiger of ontvanger van het charter, in de tekst genoemde personen, instellingen of plaatsnamen, of gegevens over bezegeling, maar die betreffen een kleine minderheid van de oorkonden. Dergelijke uitvoerige beschrijvingen aanbieden als zoekvelden zou de gebruikers misleiden, want per definitie zouden de resultaten zich altijd beperken tot die kleine selectie. DCN is daarom een overkoepelend instrument en geen vervanging voor de achterliggende inventarissen en archiefbeschrijvingen. Klikken op resultaten leidt gebruikers bewust naar die andere context van het bewarende archief waar zij soms veel meer relevante informatie kunnen vinden en verdiepend onderzoek kunnen doen. Dit noopt onderzoekers tot creativiteit: DCN is een startpunt voor verder onderzoek. Dit is met name van belang als er meer geavanceerde bewerkingen worden toegepast op de onderzoeksresultaten, want al snel raken de aard en structuur van de originele data afgeschermd achter de aggregaties en data-abstracties die het resultaat zijn van die bewerkingen. Uiteindelijk worden de al langer bestaande historische methoden verrijkt en aangevuld door de nieuwe data-georiënteerde werkwijzen, die het snel en breder vergaren van materiaal toestaan en het tegelijkertijd mogelijk maken om resultaten die met andere methoden zijn verkregen te toetsen aan een veel groter corpus.
+Ter afsluiting reflecteren we op het perspectief dat DCN biedt. Naast de voorbeelden die wij hebben gegeven is ook andersoortig onderzoek mogelijk, bijvoorbeeld naar de oorkonde zelf als materieel object, zeker als meer afbeeldingen in DCN ter beschikking komen. Zo kan men denken aan de ontwikkeling van het schriftwezen en het schrift gedurende een bepaalde periode of in een bepaalde streek, en aan een verschijnsel zoals de overgang van Latijn naar de volkstaal in ambtelijke bescheiden. Specialismen als de diplomatiek en paleografie kunnen met behulp van DCN op een veel grootschaligere en tegelijk efficiëntere en snellere wijze worden beoefend. Bovendien wordt het diplomatische onderzoek aanzienlijk versneld en verbreed wanneer geavanceerde tools, zoals automatische herkenning van schrijvershanden of automatische schriftdatering, worden ingeschakeld. In dit kader valt ook te denken aan <em>handwritten text recognition</em> (HTR), waaraan momenteel op veel plaatsen intensief wordt gewerkt. Met HTR zou de weg worden geopend naar automatisch onderzoek binnen de tekst van de oorkonden waarvan afbeeldingen beschikbaar zijn.<a href="#_ftn50" name="_ftnref50">[50]</a> Er wordt reeds geëxperimenteerd met tools ter herkenning en identificatie van (plaats)namen in oorkonden.<a href="#_ftn51" name="_ftnref51">[51]</a>
+Andere mogelijkheden voor de (nabije) toekomst worden geboden door koppeling van DCN aan andere digitale of te digitaliseren oorkondenontsluitingen. Denk hierbij aan de vele archivalische regestenboeken, oorkondenboeken en andere oorkondenedities zoals de <em>Registers van de Hollandse grafelijkheid 1299-1345</em> en het <em>Digitale Oorkondenboek Noord-Brabant</em>.<a href="#_ftn52" name="_ftnref52">[52]</a> Het ligt verder voor de hand om over de grens te kijken. Oorkonden zijn bij uitstek geschikt voor een internationale aanpak vanwege hun overal identieke formele kenmerken en de, tot in de late middeleeuwen vaak gebruikte, gemeenschappelijke voertaal van het Latijn. Een logische kandidaat zou de Belgische database <em>Diplomata Belgica</em> zijn,<a href="#_ftn53" name="_ftnref53">[53]</a> evenals de gigantische collectie van <em>Monasterium</em>, waarin de afbeeldingen en gegevens van honderdduizenden oorkonden uit kerkelijke archieven uit Midden- en Zuid-Europa doorzoekbaar zijn.<a href="#_ftn54" name="_ftnref54">[54]</a>
+Het is evenwel duidelijk dat DCN nu al veel onderzoek naar de Nederlandse middeleeuwen en de vroegmoderne periode een stuk gemakkelijker en sneller maakt. In zeer korte tijd kan de onderzoeker veel relevante gegevens vinden, ook op plaatsen die vooraf niet voor de hand liggen. Dat laatste aspect is inherent aan het gebruik van digitale ontsluitingen van omvangrijke broncorpora. De onderzoeker wordt een bredere blik vergund dan tevoren het geval was, waardoor oude vragen sneller en completer kunnen worden beantwoord en bovendien nieuwe vragen kunnen worden gesteld. Daarbij faciliteert DCN zowel gedetailleerd onderzoek, bijvoorbeeld naar een persoon of plaats, als grootschalige studies die een lange periode of breed terrein beslaan. De database is uitstekend geschikt om een eerste idee te krijgen over bepaalde lange-termijnontwikkelingen en de eventuele regionale verschillen daarin. Het is de bedoeling dat DCN eerder het begin- dan eindpunt is in de opmars van de digitale bronontsluiting en de daarop gebaseerde nieuwe vormen van historisch onderzoek.</p>
+<p><a href="#_ftnref1" name="_ftn1">[1] </a>Ten behoeve van dit artikel is de Digitale Charterbank Nederland (https://charterbank.huygens.knaw.nl) geraadpleegd in de periode juli-augustus 2019. Vanwege de dynamische aard van de database kan het aantal zoekresultaten naar verloop van tijd afwijken van de hier gerapporteerde getallen. Wij danken Kaj van Vliet, Marijn Koolen, de twee anonieme reviewers, en de redactie van dit blad voor hun commentaar op eerdere versies van de tekst.</p>
+<p><a href="#_ftnref2" name="_ftn2">[2] </a>‘Charter’ is de in de archivistiek gehanteerde term voor een in zijn originele vorm bewaard gebleven oorkonde. Daarnaast zijn er tienduizenden alleen in afschrift bewaarde oorkonden, teksten verstopt in middeleeuwse cartularia en registers of in vroegmoderne afschriften daarvan. In het volgende gaat het uitsluitend om de originele charters. Daarbij zullen zowel de termen ‘oorkonde’ als ‘charter’ worden gebruikt in hun algemene (juridische) betekenis van ‘akte’.</p>
+<p><a href="#_ftnref3" name="_ftn3">[3] </a>Behulpzaam zijn de regestenlijsten die nog wel eens zijn opgenomen in oudere inventarissen van de archieven van middeleeuwse instellingen, vorsten, of families. Een regestenlijst is een chronologische lijst van alle oorkonden (vaak ook die in afschrift) die zich in het betreffende archief bevinden, waarin de inhoud van iedere oorkonde kort is beschreven. Zie bijvoorbeeld de delen 2 en 3 van Petrus Anne Meilink, Het archief van de abdij van Egmond, 3 dln (Den Haag 1951), met 1.557 regesten over de periode 889-1571, alsmede een uitvoerige index.</p>
+<p><a href="#_ftnref4" name="_ftn4">[4] </a>Recente literatuur: Ian Milligan, History in the Age of Abundance? How the Web is Transforming Historical Research (Montreal 2019); Shawn Graham, Ian Milligan en Scott Weingart, Exploring Big Historical Data. The Historian’s Macroscope (Londen 2015). doi: https://doi.org/10.1142/p981; Christof Schöch, ‘Big? Smart? Clean? Messy? Data in the Humanities’, Journal of Digital Humanities 2:3 (2013) 2-13.</p>
+<p><a href="#_ftnref5" name="_ftn5">[5] </a>https://resources.huygens.knaw.nl/.</p>
+<p><a href="#_ftnref6" name="_ftn6">[6] </a>Een uitzondering is de bespreking door Jan Burgers van ‘Diplomata Belgica. Les sources diplomatiques des Pays-Bas méridionaux aux Moyen Âge’, Tijdschrift voor Geschiedenis 131:2 (2018) 343-345. doi: https://doi.org/10.5117/tvgesch2018.2.boek. Zelfs gespecialiseerde digitale media bespreken zelden dergelijke ontsluitingen. Zo betreffen twee van de drie besprekingen in juninummer 2020 van Digital Medievalist papieren boeken. Het Tijdschrift voor Sociale en Economische Geschiedenis kondigt wel aan structurele aandacht te gaan besteden aan data reviews, maar het daadwerkelijke aantal besprekingen is nog beperkt: https://web.archive.org/web/20200808151310/https://www.tseg.nl/announcement/ (geraadpleegd mei 2020).</p>
+<p><a href="#_ftnref7" name="_ftn7">[7] </a>Vanzelfsprekend ontbreken in dcn ook de tot op heden ongeïnventariseerde charters. Uit gesprekken met archivarissen blijkt dat dit in de verschillende archieven geen zeldzaamheid is.</p>
+<p><a href="#_ftnref8" name="_ftn8">[8] </a>De belangrijkste momenteel nog ontbrekende archieven zijn het Stadsarchief Delft, het Streekarchief Midden-Holland (Gouda) en het Erfgoedcentrum ’s-Hertogenbosch, alsmede het Koninklijk Huisarchief en enkele bibliotheekcollecties met charters.</p>
+<p><a href="#_ftnref9" name="_ftn9">[9] </a>De externe archiefinventarissen worden aangeleverd in ead, het standaard xml-archiefbeschrijvingsformaat, en geïmporteerd in de database. Deze inventarissen zijn alleen zichtbaar in de dcn-omgeving. Voor ead, zie: https://www.loc.gov/ead.</p>
+<p><a href="#_ftnref10" name="_ftn10">[10] </a>Zie het door het Nationaal Archief uitgegeven Normblad archiefinventaris (2019).</p>
+<p><a href="#_ftnref11" name="_ftn11">[11] </a>Een voorbeeld: een charter uit het Streekarchivariaat Noordwest-Veluwe, ‘5001 Archief Stadsbestuur Harderwijk (1190) 1231-1813, inv.nr. 1154’, vertoont in dcn slechts de omschrijving ‘Volmacht van burgers van Lubeck en Thoron, 1307 Augustus 7’. Pas na het ‘uitklappen’ van deze treffer ziet men de structuur van de inventaris, waarin dit stuk is gerubriceerd onder ‘1.2.19. Hanzezaken’, alsmede een apart veld ‘Thema trefwoorden: Hanze’.</p>
+<p><a href="#_ftnref12" name="_ftn12">[12] </a>Zo belandt men bijvoorbeeld bij regest nr. 1025, de verkoop van een achtenveertigste gedeelte van de ‘Coeberensteghe’ te Voorthuizen, 1562.</p>
+<p><a href="#_ftnref13" name="_ftn13">[13] </a>Uitgezonderd de bovengenoemde archiefdiensten die niet in mais-Flexis werken; hun wijzigingen moeten via eads worden aangeleverd om vervolgens in dcn te worden geüpload.</p>
+<p><a href="#_ftnref14" name="_ftn14">[14] </a>Vrijwel geen enkele van de databanken die zijn samengesteld uit verschillende deel-databanken – zoals overkoepelende inventarissen (veel instellingsbrede inventarissen van grote instellingen, de databank van het Nederlands Instituut voor Beeld en Geluid) of bibliotheekcatalogi (ncc, WorldCat) – maakt duidelijk dat de vulling van de metadata van ongelijke samenstelling en kwaliteit is. Een uitzondering hierop is de mediasuite (https://mediasuite.clariah.nl) en daarin dan speciaal de ‘collection inspector’ van het Nederlands Instituut voor Beeld en Geluid. Zie hierover ook Marijn Koolen, Jasmijn van Gorp en Jacco van Ossenbruggen, ‘Toward a model for digital tool criticism. Reflection as integrative practice’, Digital Scholarship in the Humanities 34:2 (2019) 368-385. doi: https://doi.org/10.1093/llc/fqy048.</p>
+<p><a href="#_ftnref15" name="_ftn15">[15] </a>Zie bijvoorbeeld de 147 niet-gedateerde charters in Het Utrechts Archief, Archief van de Dom te Utrecht, 1220-1811, die door het systeem van dcn automatisch het jaartal ‘1220’ kregen toegekend.</p>
+<p><a href="#_ftnref16" name="_ftn16">[16] </a>dcn heeft geen charters met een jaartal vóór het jaar 1000, maar het Regionaal Historisch Centrum Limburg heeft enkele tiende-eeuwse charters, het oudste uit 950 (01.187a Vrije Rijksheerlijkheid Thorn, 10e eeuw-1550, voorlopig inv.nr. 1). In dcn is dit stuk het jaartal ‘1550’ toegekend, automatisch gegenereerd door het systeem.</p>
+<p><a href="#_ftnref17" name="_ftn17">[17] </a>De charters van na 1800 betreffen veelal universitaire doctorsbullen.</p>
+<p><a href="#_ftnref18" name="_ftn18">[18] </a>Een export van zoekresultaten uit dcn is niet direct mogelijk, maar wel door middel van zogeheten ‘webscraping’. De gehanteerde methode is voor belangstellenden met programmeerkennis apart gedocumenteerd op https://github.com/HoekR/charterbank_analysis.</p>
+<p><a href="#_ftnref19" name="_ftn19">[19] </a>Termen zijn gematcht met reguliere expressie patronen ‘chart.*’, ‘^a[ck]+te.*’, ‘^nummer’, ‘\b(nr)’, ‘inventarisn(umme)?r’.</p>
+<p><a href="#_ftnref20" name="_ftn20">[20] </a>Voor leen is gezocht met de reguliere expressiepatronen ‘*leen’ en ‘leen*’, hetgeen resulteert in de volgende termenlijst: ‘beleend’, ‘beleening’, ‘beleent’, ‘borgleen’, ‘leen’, ‘leen-’, ‘leen-en’, ‘leenakte’, ‘leenbrief’, ‘leendert’, ‘leengoed’, ‘leengoederen’, ‘leenhof’, ‘leenhulde’, ‘leenkamer’, ‘leenmannen’, ‘leenroerig’, ‘leenten’, ‘leenten:1/4’, ‘leentyen’, ‘ringie-leen’, ‘sleen’. Hieruit is handmatig ‘leendert’ verwijderd. Voor pacht is gezocht met het reguliere expressiepatroon ‘.*pa[g|ch]+t.*’, voor rente met ‘*rente*’, voor koop met ‘ko[ch|g]+t’ en ‘koop’, voor benoeming met ‘noeming*’ en ‘aanstelling’, voor land met ‘^land\s+’, ‘morgen*’, ‘^akker’, ‘*grond.*’. Over reguliere expressies, zie Jeffrey Friedl, Mastering Regular Expressions (Cambridge ma 2006). Een interactieve tester is beschikbaar op https://regex101.com.</p>
+<p><a href="#_ftnref21" name="_ftn21">[21] </a>Zoeken op ‘notari*’ (voor notaris, notarieel) geeft 3.872 hits, veelal notariële afschriften van oorkonden. Gericht zoeken naar notariële akten met verkoop van goed (zoektermen ‘notari*’ plus ‘koop’) geeft slechts 33 resultaten, bijna alle vanaf eind zestiende eeuw.</p>
+<p><a href="#_ftnref22" name="_ftn22">[22] </a>Of op archiefdiensten met een handvol treffers: Deventer (11 hits), Amsterdam (10), Rotterdam (9), Amersfoort (8), Dordrecht (7), Den Bosch bhic (7), Alkmaar (4), Wijk bij Duurstede (4), Zwolle (3) en Leiden (2). Ook binnen een archiefdienst bevinden de gezochte stukken zich niet altijd in de voor de hand liggende fondsen. In het Nationaal Archief zijn de Brederode-oorkonden verspreid over twee dozijn archieffondsen, de meeste met slechts één, twee of drie relevante documenten.</p>
+<p><a href="#_ftnref23" name="_ftn23">[23] </a>Frits van Oostrom, Nobel streven. Het onwaarschijnlijke maar waargebeurde verhaal van ridder Jan van Brederode (Amsterdam 2017). De ontbrekende oorkonde betreft ra Dordrecht, Gemeente Hardinxveld (648), inv.nr. 96: ‘Oktrooi door Johanna van Brabant tot verlening van tolvrijdom binnen Brabant aan Jan van Brederode, heer van Hardinxveld en aan de inwoners van Hardinxveld, 1400’. Dit document had wel in Van Oostroms verhaal gepast, niet alleen omdat het licht werpt op Brederode’s interesse in het economisch welvaren van zijn onderzaten, maar ook omdat hij eind 1400 een ernstige aanvaring had met de hertogin vanwege zijn illegitieme muntslag in Waalwijk (o.c., 101-103). Deze oorkonde ontbreekt eveneens in het uitputtende Jan H. Verhoog, Onvoltooide roem. De Heeren van Brederode in de Middeleeuwen; geschiedenis van een riddergeslacht, 1203-1473 (Bergen 1997).</p>
+<p><a href="#_ftnref24" name="_ftn24">[24] </a>Bij dergelijke resultaten is het regelmatig nodig om in dcn door te klikken naar diepere niveaus van ontsluiting of naar afbeeldingen.</p>
+<p><a href="#_ftnref25" name="_ftn25">[25] </a>Voor een overzicht van de aard en oorsprong van de middeleeuwse vormen van pacht zie Hubertus Petrus Henricus Jansen, Landbouwpacht in Brabant in de veertiende en vijftiende eeuw (Assen 1955) 2-21.</p>
+<p><a href="#_ftnref26" name="_ftn26">[26] </a>De lokaal gebruikte variante term ‘erfhuur’ leverde nog eens 59 hits op (de variant ‘erfhure’ gaf geen resultaten). Zoeken op de verwante termen ‘erfcijns’, ‘erftijns’, ‘erfthijns’ en ‘erfthins’ gaf 1.742 resultaten (per term respectievelijk 1.559, 104, 78 en 1 hits).</p>
+<p><a href="#_ftnref27" name="_ftn27">[27] </a>Natuurlijk blijft het percentage erfpachtoorkonden in beide tellingen ongeveer gelijk. Minder grof afgerond: in de totale dcn betreft dit 2,38 procent, in de optelling per eeuw 2,48 procent.</p>
+<p><a href="#_ftnref28" name="_ftn28">[28] </a>Vrijwel alle treffers dateren van de late dertiende tot in de vijftiende eeuw.</p>
+<p><a href="#_ftnref29" name="_ftn29">[29] </a>Zie Janssen, Landbouwpacht, 7; Balthassar Jozef Paul van Bavel, Goederenverwerving en goederenbeheer van de abdij Mariënweerd (1129-1592) (Hilversum 1993) 220.</p>
+<p><a href="#_ftnref30" name="_ftn30">[30] </a>Daarnaast geeft ‘erftijns’ 104 hits, ‘erfthijns’ 78 en ‘erfthins’ 1.</p>
+<p><a href="#_ftnref31" name="_ftn31">[31] </a>Verder nog de Sint Stevensabdij te Oudwijk bij Utrecht (98 stuks), de Commanderij van de Duitse Orde te Gemert (94) en het kapittel van Sint Jan te Wijk-bij-Duurstede (66).</p>
+<p><a href="#_ftnref32" name="_ftn32">[32] </a>Zie de inleiding tot beide inventarissen, hua, toegangsnummers en 708 en 709.</p>
+<p><a href="#_ftnref33" name="_ftn33">[33] </a>Zelfs in de middeleeuwse en vroegmoderne archieven in het Nationaal Archief, die in meerderheid oorkonden van (Zuid-)Hollandse instellingen, families en heerlijkheden bevatten.</p>
+<p><a href="#_ftnref34" name="_ftn34">[34] </a>Zie ook Van Bavel, Goederenverwerving, 218-220: de abdij Mariënweerd begon in de eerste helft van de veertiende eeuw met grootschalige uitgifte van haar gronden in erfpacht, net als andere grote kloosters binnen en buiten de regio.</p>
+<p><a href="#_ftnref35" name="_ftn35">[35] </a>Al bevat het archief van de Kennemer abdij van Egmond (berustend in het Noord-Hollands Archief) twintig erfpachtoorkonden, tussen 1228 en 1541.</p>
+<p><a href="#_ftnref36" name="_ftn36">[36] </a>Bijvoorbeeld hua, Vrouwenklooster van Benedictinessen te De Bilt (1005-4), inv.nr. 107: ‘Akte van uitgifte in erfpacht door priorin en convent van Vrouwenklooster aan Johannes den Clover van 2 morgen land te Linschoten, 1357 mei 6’.</p>
+<p><a href="#_ftnref37" name="_ftn37">[37] </a>In dcn is meestal onduidelijk of deze termen zo in de stukken voorkomen of zijn geïntroduceerd door de inventariserende archivaris.</p>
+<p><a href="#_ftnref38" name="_ftn38">[38] </a>hua, Verzameling losse aanwinsten van de Gemeentelijke Archiefdienst Utrecht (802), inv.nr. 1420. Zie bijvoorbeeld ook aldaar, inv.nr. 1427.</p>
+<p><a href="#_ftnref39" name="_ftn39">[39] </a>Bijvoorbeeld hetzelfde archieffonds, inv.nr. 1375.</p>
+<p><a href="#_ftnref40" name="_ftn40">[40] </a>Zie bijvoorbeeld Regionaal Archief Zutphen, Kapittel van Sint Walburgis (0325) inv.nr. 167, over het recht op een grove tiende, en hua, Huis Amerongen (1001), inv.nrs. 2077-2079, over het ‘recht van de wind’.</p>
+<p><a href="#_ftnref41" name="_ftn41">[41] </a>Bijvoorbeeld bhic, Commanderij Duitse Orde in Gemert (272) inv.nr. 1382, een erfpacht van twee vaten rogge.</p>
+<p><a href="#_ftnref42" name="_ftn42">[42] </a>Zie Janssen, Landbouwpacht, 39-40.</p>
+<p><a href="#_ftnref43" name="_ftn43">[43] </a>Bijvoorbeeld ook de uitgifte in termijnpacht van land dat al in erfpacht is; zie onder andere hua, Domkapittel te Utrecht (216), inv.nr. 4359. Soms viel een goed weer terug aan de eigenaar bij het niet betalen van de erfpacht; bijvoorbeeld bhic, Kapittel van Heusden (243), inv.nr. 423.</p>
+<p><a href="#_ftnref44" name="_ftn44">[44] </a>Zie ook Joris van Eijnatten, Toine Pieters en Jaap Verheul, ‘Big Data for Global History. The Transformative Promise of Digital Humanities’, bmgn – Low Countries Historical Review 128:4 (2013) 55-77. doi: https://doi.org/10.18352/bmgn-lchr.9350; Rens Bod, Het einde van de geesteswetenschappen 1.0, Inaugurele rede 14 december 2012 (Amsterdam 2012); Jo Guldi en David Armitage, The History Manifesto (Cambridge 2014).</p>
+<p><a href="#_ftnref45" name="_ftn45">[45] </a>Hierover onder meer ‘Arguing with Digital History working group. 2017. Digital History and Argument’ (white paper). Roy Rosenzweig Center for History and New Media (November 13, 2017); Andreas Fickers, ‘Towards A New Digital Historicism? Doing History In The Age Of Abundance’, view Journal of European Television History and Culture 1:1 (2012) 19-26. doi: http://doi.org/10.18146/2213-0969.2012.jethc004; Hieke Huistra en Bram Mellink, ‘Phrasing history. Selecting sources in digital repositories’, Historical Methods: A Journal of Quantitative and Interdisciplinary History 49:4 (2016) 220-229. doi: https://doi.org/10.1080/01615440.2016.1205964; Helle Strandgaard Jensen, ‘Digital Archival Literacy for (All) Historians’, Media History 27:2 (2020) 251-265. doi: https://doi.org/10.1080/13688804.2020.1779047; Jack Dougherty en Kristen Nawrotzki (reds.), Writing History in the Digital Age (Ann Arbor 2013) 159-170. doi: https://doi.org/10.3998/dh.12230987.0001.001.</p>
+<p><a href="#_ftnref46" name="_ftn46">[46] </a>Vergelijk ook het samengestelde brievencorpus in emlo (http://emlo.bodleian.ox.ac.uk/) en hierover de bundel Howard Hotson en Thomas Wallnig (reds.), Reassembling the Republic of Letters in the Digital Age. Standards, Systems, Scholarship (Göttingen 2019). doi: https://doi.org/10.17875/gup2019-1146.</p>
+<p><a href="#_ftnref47" name="_ftn47">[47] </a>Jo Guldi, ‘Critical Search. A Procedure for Guided Reading in Large-Scale Textual Corpora’, Journal of Cultural Analytics 1:2 (2018) 5. doi: https://doi.org/10.22148/16.030.</p>
+<p><a href="#_ftnref48" name="_ftn48">[48] </a>Hierover ook Tim Hitchcock, ‘Confronting the Digital. Or How Academic History Writing Lost the Plot’, Cultural and Social History 10:1 (2013) 9-23, 12. doi: https://doi.org/10.2752/147800413X13515292098070.</p>
+<p><a href="#_ftnref49" name="_ftn49">[49] </a>Hierover uitgebreider Rik Hoekstra en Marijn Koolen, ‘Data scopes for digital history research’, Historical Methods: A Journal of Quantitative and Interdisciplinary History 52:2 (2019) 79-94. doi: https://doi.org/10.1080/01615440.2018.1484676.</p>
+<p><a href="#_ftnref50" name="_ftn50">[50] </a>Goede resultaten worden momenteel bereikt met Transkribus (https://transkribus.eu/Transkribus). De beheerders van dcn hebben het voornemen om op termijn een dergelijke tool aan het systeem toe te voegen.</p>
+<p><a href="#_ftnref51" name="_ftn51">[51] </a>Named Entity Recognition software heeft voor historische corpora nog de nodige problemen, maar zie Marijn Koolen en Rik Hoekstra, ‘Reusing Existing Structures for Accessibility of Large Historical Corpora’, paper Digital Humanities Benelux 2019, Luik 11-13 september 2019.</p>
+<p><a href="#_ftnref52" name="_ftn52">[52] </a>De gedigitaliseerde oorkondenboeken zijn te vinden op resources.huygens.knaw.nl; zie http://resources.huygens.knaw.nl/registershollandsegrafelijkheid en www.donb.nl. Voor een overzicht van digitale oorkondenedities, zie Georg Vogeler, ‘Digitale Urkundenbücher. Eine Bestandsaufnahme’, Archiv für Diplomatik, Schriftgeschichte, Siegel- und Wappenkunde 56 (2010) 363-392, en meer recent Jan Burgers, ‘Editing medieval charters in the digital age’, in: Peter Boot et al. (reds.), Advances in digital scholarly editing. Papers presented at the DiXit conferences in The Hague, Cologne, and Antwerp (Leiden 2017) 383-389.</p>
+<p><a href="#_ftnref53" name="_ftn53">[53] </a>De database van www.diplomata-belgica.be bevat gegevens van circa 35.000 ‘Belgische’ oorkonden tot ongeveer 1250, waaronder bijna 19.000 volledige teksttranscripties alsmede bijna 6500 afbeeldingen.</p>
+<p><a href="#_ftnref54" name="_ftn54">[54] </a>https://icar-us.eu/cooperation/online-portals/monasterium-net. De database omvat op het moment van schrijven meer dan 887.202 afbeeldingen van 646.785 oorkonden uit 173 archiefinstellingen in veertien landen. Ook zijn hierin tientallen gedigitaliseerde oorkondenboeken opgenomen.</p></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Journal</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#article">Article</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#achtergrond-en-opbouw-van-dcn">Achtergrond en opbouw van DCN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#een-eerste-overzicht-van-de-inhoud-van-dcn">Een eerste overzicht van de inhoud van DCN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voorbeelden-van-mogelijkheden-tot-nader-inhoudelijk-onderzoek">Voorbeelden van mogelijkheden tot nader inhoudelijk onderzoek</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brederode">Brederode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plaatsnamen">Plaatsnamen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erfpacht">Erfpacht</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mogelijkheden-van-dcn-en-methodische-reflectie">Mogelijkheden van DCN en methodische reflectie</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
