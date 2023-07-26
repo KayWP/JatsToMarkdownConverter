@@ -126,8 +126,15 @@
 
   <!-- Transform paragraphs -->
   <xsl:template match="p">
-    <xsl:text>
+    <xsl:choose>
+      <xsl:when test="parent::disp-quote">
+        <xsl:text>&gt; </xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>
 </xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
     <xsl:apply-templates/>
     <xsl:text>
 </xsl:text>
@@ -140,10 +147,7 @@
     <xsl:value-of select="graphic/@xlink:href"/>
     <xsl:text>)
 </xsl:text>
-    <!-- Add handling for figure caption -->
-    <xsl:text>_</xsl:text>
-    <xsl:apply-templates select="caption"/>
-    <xsl:text>_</xsl:text>
+    <!-- No handling for figure caption -->
     <xsl:text>
 </xsl:text>
   </xsl:template>
@@ -159,14 +163,23 @@
 </xsl:text>
   </xsl:template>
 
-  <!-- Transform captions -->
-  <xsl:template match="caption">
-    <xsl:apply-templates/>
-  </xsl:template>
-
   <!-- Transform the <sc> tag (capitalize its contents) -->
   <xsl:template match="sc">
     <xsl:value-of select="translate(., 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
+  </xsl:template>
+
+  <!-- Transform <italic> tags -->
+  <xsl:template match="italic">
+    <xsl:text>_</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>_</xsl:text>
+  </xsl:template>
+
+  <!-- Transform <bold> tags -->
+  <xsl:template match="bold">
+    <xsl:text>**</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>**</xsl:text>
   </xsl:template>
 
   <!-- Transform footnote references -->
