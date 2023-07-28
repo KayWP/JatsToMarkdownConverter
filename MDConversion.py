@@ -1,16 +1,17 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[63]:
+# In[1]:
 
 
 from lxml import etree
 import re
 import xml.etree.ElementTree as ET
 import sys
+from markdownify import markdownify as md
 
 
-# In[65]:
+# In[2]:
 
 
 def main():
@@ -24,7 +25,7 @@ def main():
         print('please input all the necessary command line variables')
 
 
-# In[56]:
+# In[3]:
 
 
 def apply_xslt(xml_path, xslt_path, output_path):
@@ -52,7 +53,7 @@ p_tbl = r'\[tbl: tb(\d+)\]' #table
 p_cptn = r'(?s)\*\_(.*?)\_\*' #caption for figure
 
 
-# In[58]:
+# In[5]:
 
 
 def extract_table_wrap_elements(xml_file):
@@ -68,6 +69,36 @@ def extract_table_wrap_elements(xml_file):
     return table_wrap_dict
 
 
+# In[24]:
+
+
+from bs4 import BeautifulSoup
+
+def html_table_to_markdown(html_table):
+    # Parse the HTML using BeautifulSoup
+    soup = BeautifulSoup(html_table, 'html.parser')
+
+    # Extract the table header (thead) and rows (tbody)
+    table_header = soup.thead
+    table_rows = soup.tbody.find_all('tr')
+
+    # Initialize the markdown table
+    markdown_table = ""
+
+    # Process the table header
+    if table_header:
+        headers = [th.text.strip() for th in table_header.find_all('th')]
+        markdown_table += "| " + " | ".join(headers) + " |\n"
+        markdown_table += "| " + " | ".join(["---"] * len(headers)) + " |\n"
+
+    # Process the table rows
+    for row in table_rows:
+        cells = [td.text.strip() for td in row.find_all(['td', 'th'])]
+        markdown_table += "| " + " | ".join(cells) + " |\n"
+
+    return markdown_table
+
+
 # In[6]:
 
 
@@ -76,7 +107,58 @@ def get_table_by_id(table_id, xmlfile):
     return table_dict[table_id]
 
 
-# In[7]:
+# In[46]:
+
+
+def replace_table(table_id, xmlfile):
+    tablepattern = r'<table>[\S\s]*<\/table>'
+    labelpattern = r'<label>.*<\/label>'
+    captionpattern = r'<caption><p>.*<\/p><\/caption>'
+    og_table = get_table_by_id(table_id, xmlfile)
+    new_table = og_table
+    
+    #fix the label
+    label = re.search(labelpattern, og_table).group()
+    print(label)
+    new_label = label.replace('<label>', '**')
+    new_label = new_label.replace('</label>', '**')
+    new_table = new_table.replace(label, new_label)
+    
+    #fix the caption
+    caption = re.search(captionpattern, og_table).group()
+    print(caption)
+    new_caption = caption.replace('<caption><p>', '_')
+    new_caption = new_caption.replace('</p></caption>', '_')
+    new_table = new_table.replace(caption, new_caption)
+    
+    #fix the table
+    tabeldeel = re.search(tablepattern, og_table).group()
+    new_tabeldeel = html_table_to_markdown(tabeldeel)
+    new_table = new_table.replace(tabeldeel, new_tabeldeel)
+    new_table = new_table.replace('</table-wrap>', '')
+    new_table = new_table.replace(re.search(r'<table-wrap .*>', new_table).group(), '')
+    
+    return new_table
+
+
+# In[45]:
+
+
+print(replace_table('tb001', 'bmgn.xml'))
+
+
+# **Tabel 1.**
+# _Overzicht van de verdeling van charters over verschillende archiefdiensten._
+# | Aantal charters | Aantal diensten | Totaal aantal charters | Procent |
+# | --- | --- | --- | --- |
+# | > 20.000 | 2 | 46.629 | 26 |
+# | 10.000-20.000 | 3 | 45.079 | 25 |
+# | 5.000-10.000 | 4 | 28.794 | 16 |
+# | 1.000-5.000 | 13 | 45.687 | 25 |
+# | 100-1.000 | 30 | 11.124 | 6 |
+# | <100 | 32 | 941 | 0,5 |
+
+# In[47]:
 
 
 def replace_tables(markupfile, xmlfile):
@@ -84,7 +166,7 @@ def replace_tables(markupfile, xmlfile):
     for table in id_nos:
         tblid = 'tb' + table
         #print(table)
-        replacement = get_table_by_id(tblid, xmlfile)
+        replacement = replace_table(tblid, xmlfile)
         #print()
         #print(replacement)
         tobereplaced = '[tbl: ' + tblid + ']'
@@ -92,7 +174,7 @@ def replace_tables(markupfile, xmlfile):
     return markupfile
 
 
-# In[60]:
+# In[10]:
 
 
 def get_text_recursively(element):
@@ -122,7 +204,7 @@ def extract_fn_contents(xml_file):
     return fn_dict
 
 
-# In[49]:
+# In[11]:
 
 
 def add_footnotes_bottom(txt, basexml):
@@ -137,7 +219,7 @@ def add_footnotes_bottom(txt, basexml):
     return txt
 
 
-# In[61]:
+# In[12]:
 
 
 def add_fn(txt, xmlfile):
@@ -154,7 +236,7 @@ def add_fn(txt, xmlfile):
     return txt
 
 
-# In[2]:
+# In[13]:
 
 
 def do_it_all(input_path, style_path):
@@ -172,13 +254,18 @@ def do_it_all(input_path, style_path):
     return markdownfile
 
 
-# In[ ]:
+# In[14]:
 
 
 main()
 
 
-# 
+# | > 20.000 | 2 | 46.629 | 26 |
+# | 10.000-20.000 | 3 | 45.079 | 25 |
+# | 5.000-10.000 | 4 | 28.794 | 16 |
+# | 1.000-5.000 | 13 | 45.687 | 25 |
+# | 100-1.000 | 30 | 11.124 | 6 |
+# | <100 | 32 | 941 | 0,5 |
 
 # In[ ]:
 
