@@ -124,20 +124,14 @@
 </xsl:text>
   </xsl:template>
 
-  <!-- Transform paragraphs -->
+  <!-- Transform paragraphs with four spaces after each paragraph -->
   <xsl:template match="p">
-    <xsl:choose>
-      <xsl:when test="parent::disp-quote">
-        <xsl:text>&gt; </xsl:text>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:text>
+    <xsl:text>
 </xsl:text>
-      </xsl:otherwise>
-    </xsl:choose>
     <xsl:apply-templates/>
     <xsl:text>
 </xsl:text>
+    <xsl:text>    </xsl:text> <!-- Add four spaces after each paragraph -->
   </xsl:template>
 
   <!-- Transform figures -->
