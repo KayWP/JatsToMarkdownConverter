@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# <h1>Table of Contents<span class="tocSkip"></span></h1>
+# <div class="toc"><ul class="toc-item"></ul></div>
+
 # In[1]:
 
 
@@ -119,14 +122,14 @@ def replace_table(table_id, xmlfile):
     
     #fix the label
     label = re.search(labelpattern, og_table).group()
-    print(label)
+    #print(label)
     new_label = label.replace('<label>', '**')
     new_label = new_label.replace('</label>', '**')
     new_table = new_table.replace(label, new_label)
     
     #fix the caption
     caption = re.search(captionpattern, og_table).group()
-    print(caption)
+    #print(caption)
     new_caption = caption.replace('<caption><p>', '_')
     new_caption = new_caption.replace('</p></caption>', '_')
     new_table = new_table.replace(caption, new_caption)
@@ -140,23 +143,6 @@ def replace_table(table_id, xmlfile):
     
     return new_table
 
-
-# In[45]:
-
-
-print(replace_table('tb001', 'bmgn.xml'))
-
-
-# **Tabel 1.**
-# _Overzicht van de verdeling van charters over verschillende archiefdiensten._
-# | Aantal charters | Aantal diensten | Totaal aantal charters | Procent |
-# | --- | --- | --- | --- |
-# | > 20.000 | 2 | 46.629 | 26 |
-# | 10.000-20.000 | 3 | 45.079 | 25 |
-# | 5.000-10.000 | 4 | 28.794 | 16 |
-# | 1.000-5.000 | 13 | 45.687 | 25 |
-# | 100-1.000 | 30 | 11.124 | 6 |
-# | <100 | 32 | 941 | 0,5 |
 
 # In[47]:
 
@@ -259,13 +245,6 @@ def do_it_all(input_path, style_path):
 
 main()
 
-
-# | > 20.000 | 2 | 46.629 | 26 |
-# | 10.000-20.000 | 3 | 45.079 | 25 |
-# | 5.000-10.000 | 4 | 28.794 | 16 |
-# | 1.000-5.000 | 13 | 45.687 | 25 |
-# | 100-1.000 | 30 | 11.124 | 6 |
-# | <100 | 32 | 941 | 0,5 |
 
 # In[ ]:
 
