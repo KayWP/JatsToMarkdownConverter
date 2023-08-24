@@ -1,0 +1,74 @@
+<div id="sidebar">
+    <div id="sidebar-content">
+      <!-- Content will be dynamically loaded here based on the selected button -->
+    </div>
+  </div>
+  
+  <button class="sidebar-toggle" data-content="methodology">Methodologie</button>
+  <button class="sidebar-toggle" data-content="results">Results</button>
+  <button class="sidebar-toggle" data-content="discussion">Discussion</button>
+  
+  <style>
+    /* Your sidebar and button styles here */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: -25vw; /* Adjust this value to control the sidebar width as a percentage of screen width */
+      height: 100%;
+      width: 25vw; /* Adjust this value to control the sidebar width as a percentage of screen width */
+      background-color: #f0f0f0;
+      padding: 10px;
+      transition: left 0.3s ease;
+      overflow-y: auto; /* Enable vertical scrolling */
+    }
+    .sidebar-toggle {
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 9999; /* Ensure the button stays on top of other elements */
+    }
+  
+    #sidebar-content {
+      padding: 20px; /* Add margin to the content */
+    }
+  
+    #sidebar.active {
+      left: 0;
+    }
+  
+    #sidebar.active #sidebar-content {
+      display: block;
+    }
+  </style>
+  
+  <script>
+    // Get all elements with the class 'sidebar-toggle'
+    const sidebarButtons = document.querySelectorAll(".sidebar-toggle");
+    const sidebarContent = document.getElementById("sidebar-content");
+  
+    // Define content for each button
+    const contentMap = {
+      methodology: "Put the methodology text here...",
+      results: "Put the results text here...",
+      discussion: "Put the discussion text here..."
+    };
+  
+    sidebarButtons.forEach(button => {
+      button.addEventListener("click", function() {
+        const contentKey = this.getAttribute("data-content");
+        const content = contentMap[contentKey];
+        sidebarContent.innerHTML = `<p>${content}</p>`;
+        const sidebar = document.getElementById("sidebar");
+          if (sidebar.classList.contains("active")) {
+          sidebar.classList.remove("active");
+          } else {
+            sidebar.classList.add("active");
+          }
+      });
+    });
+  </script>
+  
