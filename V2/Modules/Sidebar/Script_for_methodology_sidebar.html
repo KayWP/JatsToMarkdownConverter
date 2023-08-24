@@ -10,9 +10,9 @@
   #sidebar {
     position: fixed;
     top: 0;
-    left: -400px; /* Adjust this value to control the sidebar width */
+    left: -25vw; /* Adjust this value to control the sidebar width as a percentage of screen width */
     height: 100%;
-    width: 400px; /* Adjust this value to control the sidebar width */
+    width: 25vw; /* Adjust this value to control the sidebar width as a percentage of screen width */
     background-color: #f0f0f0;
     padding: 10px;
     transition: left 0.3s ease;
@@ -32,7 +32,7 @@
   }
 
   #sidebar-content {
-    display: none;
+    padding: 20px; /* Add margin to the content */
   }
 
   #sidebar.active {
