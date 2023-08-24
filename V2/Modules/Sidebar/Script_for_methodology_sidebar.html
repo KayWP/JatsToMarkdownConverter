@@ -1,0 +1,51 @@
+<div id="sidebar">
+  <div id="sidebar-content">
+    <p>Put the methodology text here. This text will be long enough to cause overflow and enable scrolling inside the sidebar.</p>
+  </div>
+</div>
+
+<button id="sidebar-toggle">Methodologie</button>
+
+<style>
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -400px; /* Adjust this value to control the sidebar width */
+    height: 100%;
+    width: 400px; /* Adjust this value to control the sidebar width */
+    background-color: #f0f0f0;
+    padding: 10px;
+    transition: left 0.3s ease;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  #sidebar-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 9999; /* Ensure the button stays on top of other elements */
+  }
+
+  #sidebar-content {
+    display: none;
+  }
+
+  #sidebar.active {
+    left: 0;
+  }
+
+  #sidebar.active #sidebar-content {
+    display: block;
+  }
+</style>
+
+<script>
+  document.getElementById("sidebar-toggle").addEventListener("click", function() {
+    document.getElementById("sidebar").classList.toggle("active");
+  });
+</script>
