@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 import re
@@ -35,6 +35,44 @@ def apply_xslt(xml_path, xslt_path):
     transformed_tree = transformer(xml_tree)
     
     return str(transformed_tree)
+
+
+# In[55]:
+
+
+def find_article_metadata_bmgn(xml):
+    #this function is specific to the BMGN structure. Not sure how well it will work for other journals
+    xml_tree = etree.parse(xml)
+    article_title = xml_tree.find('//article-title')
+    article_subtitle = xml_tree.find('//subtitle')
+    author_names = []
+    for contrib in xml_tree.xpath('//contrib[@contrib-type="author"]'):
+        surname = contrib.find('.//surname').text
+        given_names = contrib.find('.//given-names').text
+        full_name = f"{given_names} {surname}"
+        author_names.append(full_name)
+        
+    doi_element = xml_tree.find('.//article-id[@pub-id-type="doi"]')
+    
+    return article_title.text, article_subtitle.text, author_names, doi_element.text
+
+
+# In[54]:
+
+
+def replace_title_bmgn(markdown, xml):
+    title_info = find_article_metadata_bmgn(xml)
+    title = f"#{title_info[0]} \n##{title_info[1]} \n[{title_info[3]}]({title_info[3]})\n\n"
+    for author in title_info[2]:
+        title = title + f"{author}\n"
+    markdown = markdown.split('### Inleiding')[1] #dit moet netter, je kunt hier niet van uitgaan. Body?
+    return title + '\n' + markdown
+
+
+# In[51]:
+
+
+
 
 
 # In[4]:
@@ -117,25 +155,26 @@ def activate_urls(text):
     return formatted_text
 
 
-# In[13]:
+# In[53]:
 
 
 def main():
     try:
         input_file = sys.argv[1]
         style_file = sys.argv[2]
-        
-        markdown_file = apply_xslt(input_file, style_file)
-        
-        #replace tables here
-        markdown_file = add_footnotes_bottom(markdown_file, input_file)
-        markdown_file = add_fn(markdown_file, input_file)    
-            
-        with open('markdown.txt', 'w') as final_file:
-            final_file.write(markdown_file)
             
     except IndexError:
         print('Please input all the necessary command line variables')
+        
+    markdown_file = apply_xslt(input_file, style_file)
+        
+        #replace tables here
+    markdown_file = add_footnotes_bottom(markdown_file, input_file)
+    markdown_file = add_fn(markdown_file, input_file)
+    markdown_file = replace_title_bmgn(markdown_file, input_file)
+            
+    with open('markdown.txt', 'w') as final_file:
+        final_file.write(markdown_file)
 
 
 # In[11]:

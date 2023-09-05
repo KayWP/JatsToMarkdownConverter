@@ -1,23 +1,11 @@
-# Journal
-**Title:** BMGN - Low Countries Historical Review
-**ISSN (epub):** 2211-2898
-**ISSN (ppub):** 0165-0505
-**Publisher:** Royal Netherlands Historical Society | KNHG
-**Publisher Location:** Amsterdam, The Netherlands
+#De Digitale Charterbank Nederland 
+##Grootschalige digitale bronontsluiting en het historisch onderzoek 
+[10.51769/bmgn-lchr.6997](10.51769/bmgn-lchr.6997)
 
-# Article
-**Article ID (Publisher):** bmgn-lchr.6997
-**DOI:** 10.51769/bmgn-lchr.6997
-**Category:** Article
-**Title:** De Digitale Charterbank Nederland
-**Authors:** Burgers, Jan; Hoekstra, Rik
-**Publication Date (epub):** 2021-09
-**Volume:** 136
-**Issue:** 3
-**Pages:** 92-119
+Jan Burgers
+Rik Hoekstra
 
 
-### Inleiding
 
 
 In januari 2019 werd de _Digitale Charterbank Nederland_ (DCN) opengesteld. DCN is de uitkomst van een samenwerking tussen het Huygens Instituut voor Nederlandse Geschiedenis te Amsterdam en de firma De Ree Archiefsystemen te Groningen. Aan het ontsluitingsproject werd ook deelgenomen door Het Utrechts Archief. In dit artikel geven we een overzicht van DCN, zijn structuur en zijn inherente mogelijkheden en problemen. We willen hiermee bijdragen aan een bewustwording van de methodologische implicaties van het gebruik van digitale bronnen en gereedschappen (of _tools_) in het historisch bedrijf waarmee de onderzoeker in toenemende mate te maken krijgt.
