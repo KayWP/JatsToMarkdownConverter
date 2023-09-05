@@ -4,7 +4,7 @@
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
 # <div class="toc"><ul class="toc-item"></ul></div>
 
-# In[1]:
+# In[2]:
 
 
 from lxml import etree
@@ -14,13 +14,16 @@ import sys
 from markdownify import markdownify as md
 
 
-# In[2]:
+# In[19]:
 
 
 def main():
     try:
-        inp = sys.argv[1]
-        style = sys.argv[2]
+        #inp = sys.argv[1]
+        #style = sys.argv[2]
+        inp = 'charterbank.xml'
+        style = 'style.xslt'
+        transformer = etree.XSLT(xslt_tree)
     #get paths
         with open('markdown.txt', 'w') as output_file:
             output_file.write(do_it_all(inp, style))
@@ -72,7 +75,7 @@ def extract_table_wrap_elements(xml_file):
     return table_wrap_dict
 
 
-# In[24]:
+# In[6]:
 
 
 from bs4 import BeautifulSoup
@@ -102,7 +105,7 @@ def html_table_to_markdown(html_table):
     return markdown_table
 
 
-# In[6]:
+# In[7]:
 
 
 def get_table_by_id(table_id, xmlfile):
@@ -110,7 +113,7 @@ def get_table_by_id(table_id, xmlfile):
     return table_dict[table_id]
 
 
-# In[46]:
+# In[8]:
 
 
 def replace_table(table_id, xmlfile):
@@ -144,7 +147,7 @@ def replace_table(table_id, xmlfile):
     return new_table
 
 
-# In[47]:
+# In[9]:
 
 
 def replace_tables(markupfile, xmlfile):
@@ -193,11 +196,24 @@ def extract_fn_contents(xml_file):
 # In[11]:
 
 
+def apply_xslt_fn(fn, xslt_path):
+    # Load the XML and XSLT files
+    xslt_tree = etree.parse(xslt_path)
+
+    # Create the XSLT transformer
+    transformer = etree.XSLT(xslt_tree)
+
+    # Apply the XSLT transformation to the XML
+    transformed_fn = transformer(fn)
+
+    return output
+
 def add_footnotes_bottom(txt, basexml):
     footnote_list = extract_fn_contents(basexml)
     for fn in footnote_list.keys():
         fnno = fn
         fntxt = footnote_list[fn]
+        fntxt = apply_xslt_fn(fntxt, sys.argv[2]) #apply stylesheet to fntxt
         fnformula = "<p><a href=\"#_ftnref"+ fnno +'" name="_ftn' + fnno + '">[' + fnno +'] </a>' + fntxt + '</p>'
         txt += '\n'
         txt += '\n'
@@ -240,7 +256,7 @@ def do_it_all(input_path, style_path):
     return markdownfile
 
 
-# In[14]:
+# In[18]:
 
 
 main()

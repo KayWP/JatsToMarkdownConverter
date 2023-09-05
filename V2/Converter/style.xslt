@@ -134,6 +134,14 @@
     <xsl:text>    </xsl:text> <!-- Add four spaces after each paragraph -->
   </xsl:template>
 
+<xsl:template match="*[local-name()='ext-link']">
+  <xsl:text>[</xsl:text>
+  <xsl:apply-templates/>
+  <xsl:text>](&lt;</xsl:text>
+  <xsl:value-of select="@xlink:href"/>
+  <xsl:text>&gt;)</xsl:text>
+</xsl:template>
+
   <!-- Transform figures -->
   <xsl:template match="fig">
     <xsl:text>
@@ -181,6 +189,15 @@
     <xsl:text>[fn:</xsl:text>
     <xsl:value-of select="xref/@rid"/>
     <xsl:text>]</xsl:text>
+  </xsl:template>
+
+  <!-- New Rule: Transform <ext-link> tags into Markdown URLs -->
+  <xsl:template match="ext-link">
+    <xsl:text>[</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>](&#x27;</xsl:text>
+    <xsl:value-of select="@xlink:href"/>
+    <xsl:text>&#x27;)</xsl:text>
   </xsl:template>
 
   <!-- Transform any other elements (not explicitly matched) -->
