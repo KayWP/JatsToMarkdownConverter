@@ -8,7 +8,23 @@ body {
   margin-right: 20%;
 }
 
-h1, h2, h3 {
+h1 {
+  font-size: 18px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 14px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 13px;
+  font-family: Georgia, serif;
   font-weight: bold;
   margin-top: 20px;
 }
