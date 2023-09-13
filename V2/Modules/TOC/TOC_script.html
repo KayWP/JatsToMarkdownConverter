@@ -1,0 +1,128 @@
+<style>
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -25vw; /* Adjust this value to control the sidebar width as a percentage of screen width */
+    height: 100%;
+    width: 25vw; /* Adjust this value to control the sidebar width as a percentage of screen width */
+    background-color: #f0f0f0;
+    padding: 10px;
+    transition: left 0.3s ease;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  #sidebar-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 9999; /* Ensure the button stays on top of other elements */
+  }
+
+  #sidebar-content {
+    padding: 20px; /* Add margin to the content */
+  }
+
+  #sidebar.active {
+    left: 0;
+  }
+
+  #sidebar.active #sidebar-content {
+    display: block;
+  }
+
+  #my-toc {
+  max-height: 80vh; /* Adjust the maximum height as needed */
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+#my-toc li {
+  margin: 8px 0;
+}
+
+#my-toc a {
+  text-decoration: none;
+  color: #333;
+}
+
+#my-toc a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<script>
+  document.getElementById("sidebar-toggle").addEventListener("click", function() {
+    document.getElementById("sidebar").classList.toggle("active");
+  });
+</script>
+
+<button id="sidebar-toggle">Methodologie</button>
+
+<script>
+function generateTableOfContents() {
+  var headings = document.querySelectorAll("h3, h4, h5, h6");
+  var toc = document.createElement("ul");
+  toc.setAttribute("id", "my-toc");
+
+  var prevLevel = 3; // Initialize with the highest level
+
+  for (var i = 0; i < headings.length; i++) {
+    var heading = headings[i];
+    var id = heading.getAttribute("id");
+    var text = heading.textContent.replace(/¶/g, "\n"); // Replace "¶" with newline
+    var level = parseInt(heading.tagName.charAt(1)); // Extract heading level
+
+    // Create list items and anchors
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.setAttribute("href", "#" + id);
+    a.textContent = text;
+
+    // Adjust the nesting based on heading levels
+    if (level > prevLevel) {
+      var ul = document.createElement("ul");
+      li.appendChild(ul);
+    } else if (level < prevLevel) {
+      // Move back up in nesting
+      var diff = prevLevel - level;
+      for (var j = 0; j < diff; j++) {
+        ul = ul.parentElement.parentElement; // Move up two levels
+      }
+    }
+
+    // Append the anchor to the list item and the list item to the TOC
+    li.appendChild(a);
+    toc.appendChild(li);
+
+    prevLevel = level;
+  }
+
+  return toc;
+}
+
+  // Event listener for the sidebar-toggle button click.
+  document.getElementById("sidebar-toggle").addEventListener("click", function () {
+    // Generate the table of contents.
+    var toc = generateTableOfContents();
+
+    // Get the sidebar content container.
+    var sidebarContent = document.getElementById("sidebar-content");
+
+    // Remove any existing content in the sidebar content container.
+    while (sidebarContent.firstChild) {
+      sidebarContent.removeChild(sidebarContent.firstChild);
+    }
+
+    // Append the generated table of contents to the sidebar content container.
+    sidebarContent.appendChild(toc);
+
+    // Toggle the sidebar's active state.
+    document.getElementById("sidebar").classList.toggle("active");
+  });
+</script>
