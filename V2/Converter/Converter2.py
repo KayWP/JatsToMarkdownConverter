@@ -76,7 +76,7 @@ def find_article_metadata_bmgn(xml):
 
 def gen_title_bmgn(xml):
     title_info = find_article_metadata_bmgn(xml)
-    title = f"#{title_info[0]} \n##{title_info[1]} \n[{title_info[3]}]({title_info[3]})\n\n"
+    title = f"# {title_info[0]} \n## {title_info[1]} \n[{title_info[3]}]({title_info[3]})\n\n"
     for author in title_info[2]:
         title = title + f"{author}\n"
     return title
@@ -155,7 +155,7 @@ def add_fn(txt, xmlfile):
     return txt
 
 
-# In[28]:
+# In[14]:
 
 
 def activate_urls(text):
@@ -163,7 +163,7 @@ def activate_urls(text):
     formatted_text = text
     for url in urls:
         url = url.strip('.')
-        markdown_link = f'[{url}]({url})'
+        markdown_link = f'<a href={url}>{url}</a>'
         formatted_text = formatted_text.replace(url, markdown_link)
     return formatted_text
 
