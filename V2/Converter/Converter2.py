@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 import re
@@ -12,7 +12,7 @@ from lxml import etree
 import sys
 
 
-# In[25]:
+# In[2]:
 
 
 #regexes:
@@ -25,16 +25,30 @@ p_url = r'https?:\/\/[^\s()]+'
 # In[3]:
 
 
-def apply_xslt(xml_path, xslt_path):
+def apply_xslt(xml_string, xslt_path):
     """
     Apply XSLT transformation to an XML file and save the result to a text file.
     """
-    xml_tree = etree.parse(xml_path)
+    xml_tree = etree.fromstring(xml_string)
     xslt_tree = etree.parse(xslt_path)
     transformer = etree.XSLT(xslt_tree)
     transformed_tree = transformer(xml_tree)
     
     return str(transformed_tree)
+
+
+# In[12]:
+
+
+def split_title_from_body(xml):
+    #takes an xml file, reads it, returns an lxml.etree._ElementTree object without the 'front'
+    tree = ET.parse(xml)
+    tree = tree.getroot()
+    tree.remove(tree.find('front'))
+
+    string = ET.tostring(tree)
+    
+    return string
 
 
 # In[55]:
@@ -60,13 +74,12 @@ def find_article_metadata_bmgn(xml):
 # In[54]:
 
 
-def replace_title_bmgn(markdown, xml):
+def gen_title_bmgn(xml):
     title_info = find_article_metadata_bmgn(xml)
     title = f"#{title_info[0]} \n##{title_info[1]} \n[{title_info[3]}]({title_info[3]})\n\n"
     for author in title_info[2]:
         title = title + f"{author}\n"
-    markdown = markdown.split('### Inleiding')[1] #dit moet netter, je kunt hier niet van uitgaan. Body?
-    return title + '\n' + markdown
+    return title
 
 
 # In[51]:
@@ -165,16 +178,20 @@ def main():
             
     except IndexError:
         print('Please input all the necessary command line variables')
-        
-    markdown_file = apply_xslt(input_file, style_file)
+    
+    
+    file_without_front = split_title_from_body(input_file) #split the front, so we can add the title info in the replace_title function
+    markdown_file = apply_xslt(file_without_front, style_file)
         
         #replace tables here
     markdown_file = add_footnotes_bottom(markdown_file, input_file)
     markdown_file = add_fn(markdown_file, input_file)
-    markdown_file = replace_title_bmgn(markdown_file, input_file)
-            
+    title = gen_title_bmgn(input_file) #create a title from the XML
+    
+    final_product = title + '\n' + markdown_file #merge the generated title with the process front-free file
+    
     with open('markdown.txt', 'w') as final_file:
-        final_file.write(markdown_file)
+        final_file.write(final_product)
 
 
 # In[11]:

@@ -7,6 +7,8 @@ Rik Hoekstra
 
 
 
+### Inleiding
+
 
 In januari 2019 werd de _Digitale Charterbank Nederland_ (DCN) opengesteld. DCN is de uitkomst van een samenwerking tussen het Huygens Instituut voor Nederlandse Geschiedenis te Amsterdam en de firma De Ree Archiefsystemen te Groningen. Aan het ontsluitingsproject werd ook deelgenomen door Het Utrechts Archief. In dit artikel geven we een overzicht van DCN, zijn structuur en zijn inherente mogelijkheden en problemen. We willen hiermee bijdragen aan een bewustwording van de methodologische implicaties van het gebruik van digitale bronnen en gereedschappen (of _tools_) in het historisch bedrijf waarmee de onderzoeker in toenemende mate te maken krijgt.
     
