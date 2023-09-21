@@ -163,7 +163,7 @@ def activate_urls(text):
     formatted_text = text
     for url in urls:
         url = url.strip('.')
-        markdown_link = f'<a href={url}>{url}</a>'
+        markdown_link = f'<a href={url} target="blank">{url}</a>'
         formatted_text = formatted_text.replace(url, markdown_link)
     return formatted_text
 
