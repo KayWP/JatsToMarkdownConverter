@@ -2,68 +2,13 @@
 <html>
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="https://github.com/KayWP/Pub_Jupyter/blob/65b124eae89824f785ac7ff245eb49e2a3e30e36/styles.css">
+
 <title>Charterbank</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
 
 <style type="text/css">
-
-
-body {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  background-color: #fff;
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-h1 {
-  font-size: 18px;
-  font-family: Georgia, serif;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-h2 {
-  font-size: 14px;
-  font-family: Georgia, serif;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-h3 {
-  font-size: 13px;
-  font-family: Georgia, serif;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-code {
-  background-color: #eee;
-  padding: 5px;
-  border-radius: 3px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -1020,15 +965,15 @@ strong{
     color:#f5f8fa; }
 
 h1.bp3-heading, .bp3-running-text h1{
-  font-size:18px;
-  line-height:18px; }
+  font-size:36px;
+  line-height:40px; }
 
 h2.bp3-heading, .bp3-running-text h2{
   font-size:28px;
   line-height:32px; }
 
 h3.bp3-heading, .bp3-running-text h3{
-  font-size:13px;
+  font-size:22px;
   line-height:25px; }
 
 h4.bp3-heading, .bp3-running-text h4{
@@ -14261,11 +14206,11 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-line-height: 1.6;
   --jp-content-font-scale-factor: 1.2;
   --jp-content-font-size0: 0.83333em;
-  --jp-content-font-size1: 13px; /* Base font size */
+  --jp-content-font-size1: 14px; /* Base font size */
   --jp-content-font-size2: 1.2em;
-  --jp-content-font-size3: 13px;
-  --jp-content-font-size4: 14px;
-  --jp-content-font-size5: 18px;
+  --jp-content-font-size3: 1.44em;
+  --jp-content-font-size4: 1.728em;
+  --jp-content-font-size5: 2.0736em;
 
   /* This gives a magnification of about 125% in presentation mode over normal. */
   --jp-content-presentation-font-size1: 17px;
@@ -14273,7 +14218,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-heading-line-height: 1;
   --jp-content-heading-margin-top: 1.2em;
   --jp-content-heading-margin-bottom: 0.8em;
-  --jp-content-heading-font-weight: bold;
+  --jp-content-heading-font-weight: 500;
 
   /* Defaults use Material Design specification */
   --jp-content-font-color0: rgba(0, 0, 0, 1);
@@ -14694,7 +14639,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
   document.getElementById("sidebar-toggle").addEventListener("click", function() {
     document.getElementById("sidebar").classList.toggle("active");
   });
-</script><button id="sidebar-toggle">Methodologie</button><script>
+</script><button id="sidebar-toggle">Inhoud</button><script>
 function generateTableOfContents() {
   var headings = document.querySelectorAll("h3, h4, h5, h6");
   var toc = document.createElement("ul");
@@ -14766,7 +14711,7 @@ function generateTableOfContents() {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/KayWP/Pub_Jupyter/main/styles.css">
+<link rel="stylesheet" href="styles.css">
 </div>
 </div>
 </div>
@@ -14797,13 +14742,157 @@ Rik Hoekstra</p>
 <p><img src="figures/bmgn-lchr.6997_fig2.jpg" alt="Image"></p>
 <h3 id="Een-eerste-overzicht-van-de-inhoud-van-DCN">Een eerste overzicht van de inhoud van DCN<a class="anchor-link" href="#Een-eerste-overzicht-van-de-inhoud-van-DCN">&#182;</a></h3><p>Hoewel we nauw betrokken waren bij de realisatie van DCN, kennen ook wij bij lange na niet alle ruim 180.000 charters uit de in totaal 91 archiefdiensten. Het navolgende overzicht van de inhoud is daarom noodzakelijkerwijs exploratief van karakter, waarbij we zo transparant mogelijk proberen aan te geven wat we met onze zoekacties aantroffen. Zoals bij alle grote databanken is het op voorhand niet duidelijk wat DCN precies bevat, en bij een zo omvangrijk corpus is dat ook niet intuïtief te doorgronden door wat te bladeren of ongericht te zoeken.<a href="#_ftn14" name="_ftnref14">[14]</a> Een systeem als DCN heeft daarnaast specifieke problemen, die de meer ervaren onderzoeker soms kan ondervangen met een slimme zoekstrategie. De charterbank geeft bijvoorbeeld 3.350 charters als zoekresultaten vóór 1300, maar bij nadere inspectie blijkt dat zich hierin ook onjuist gedateerde charters bevinden. Dergelijke fouten zijn vaak te herleiden tot verkeerde aannames bij het invullen van de data, ofwel handmatig door de archiefdiensten, dan wel automatisch door het systeem van DCN. Niet of incorrect gedateerde charters krijgen in het systeem een automatisch gegenereerd ‘jaartal’, vaak gebaseerd op een in de betreffende beschrijving gevonden viercijferig getal, zoals een geldbedrag, een oppervlaktemaat, een inventaris- of regestnummer of een jaartal uit de naam van de archiefinventaris dat toevallig overeenkomt met de elfde of twaalfde eeuw.<a href="#_ftn15" name="_ftnref15">[15]</a> Dit dateringsprobleem is deels te ondervangen door te zoeken op 1101 tot 1299, met vermijding van ‘ronde’ getallen, die relatief vaak voorkomen in andere functies dan een jaartal. Het aantal resultaten komt dan neer op 3.134. Als we bij de dertiende eeuw aankomen (zoek op 1201-1299) geven de eerste tien pagina’s (tweehonderd documenten) ruim vijftig ‘goede’ resultaten. Vooral bij de oudere charters, ruwweg van vóór 1300, moeten gebruikers rekening houden met dit dateringsprobleem. DCN geeft de indruk dat de datering in latere perioden veel beter is. Steekproeven in charters uit de periode 1550-1565 wijzen uit dat daar ongeveer tien procent van de stukken niet uit deze jaren stamt. Gelukkig is bij inspectie van de afzonderlijke documenten zelf in DCN de correcte datering vrijwel steeds onmiddellijk duidelijk.</p>
 <p>Een kwantitatieve analyse leert dat er in totaal 91 archiefdiensten zijn vertegenwoordigd in DCN, met een gemiddeld aantal charters van 1.959. Het grootste aantal heeft Het Utrechts Archief met 25.730 charters (14,4 procent van het totale aantal), gevolgd door het Gelders Archief (20.942 stuks), de Groninger Archieven (17.346), het Nationaal Archief (15.367) en het Brabants Historisch Informatie Centrum (12.366). Tabel 1 vat de verdeling van charters over de verschillende archiefdiensten samen.</p>
-<p>[tbl: tb001]</p>
+<table>
+<thead><tr>
+<th>Aantal charters</th>
+<th>Aantal diensten</th>
+<th>Totaal aantal charters</th>
+<th>Procent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x003E; 20.000</td>
+<td>2</td>
+<td>46.629</td>
+<td>26</td>
+</tr>
+<tr>
+<td>10.000-20.000</td>
+<td>3</td>
+<td>45.079</td>
+<td>25</td>
+</tr>
+<tr>
+<td>5.000-10.000</td>
+<td>4</td>
+<td>28.794</td>
+<td>16</td>
+</tr>
+<tr>
+<td>1.000-5.000</td>
+<td>13</td>
+<td>45.687</td>
+<td>25</td>
+</tr>
+<tr>
+<td>100-1.000</td>
+<td>30</td>
+<td>11.124</td>
+<td>6</td>
+</tr>
+<tr>
+<td>&#x003C;100</td>
+<td>32</td>
+<td>941</td>
+<td>0,5</td>
+</tr>
+</tbody>
+</table>
 <p>De diensten herbergen elk vele archieffondsen met uiteenlopende aantallen charters. In totaal gaat het momenteel om 4.057 fondsen met elk gemiddeld 87 charters, verdeeld zoals aangegeven in tabel 2. De vijf grootste fondsen zijn de Ridderlijke Duitsche Orde, Balije van Utrecht (4.409 charters), het Kapittel van Sint Marie te Utrecht (3.726), het Domkapittel te Utrecht (2.485), het Stadsbestuur van Zwolle (2.477) en Graven en hertogen van Gelre, graven van Zutphen (1.877). Er zijn vooral heel veel kleine fondsen: ongeveer de helft heeft vijf of minder charters en daarvan bevatten er zo’n duizend slechts één enkel charter.</p>
-<p>[tbl: tb002]</p>
+<table>
+<thead><tr>
+<th>Aantal charters</th>
+<th>Aantal fondsen</th>
+<th>Totaal aantal charters</th>
+<th>Procent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.001-4.409</td>
+<td>27</td>
+<td>39.784</td>
+<td>22</td>
+</tr>
+<tr>
+<td>501-1.000</td>
+<td>42</td>
+<td>28.375</td>
+<td>16</td>
+</tr>
+<tr>
+<td>201-500</td>
+<td>128</td>
+<td>39.938</td>
+<td>22</td>
+</tr>
+<tr>
+<td>101-200</td>
+<td>156</td>
+<td>22.415</td>
+<td>13</td>
+</tr>
+<tr>
+<td>21-100</td>
+<td>728</td>
+<td>32.561</td>
+<td>18</td>
+</tr>
+<tr>
+<td>11-20</td>
+<td>469</td>
+<td>7.081</td>
+<td>4</td>
+</tr>
+<tr>
+<td>6-10</td>
+<td>467</td>
+<td>3.539</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1-5</td>
+<td>2.039</td>
+<td>4.180</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
 <p>De identiteit van de archiefvormers met charters in de collectie betreft in 885 gevallen een ‘gemeente’, zowel seculier als kerkelijk, en nog 79 maal een ‘parochie’. Daarnaast zijn er 584 archieffondsen met het woord ‘familie’ en 150 met het woord ‘huis’. In de lijst van meest algemene termen met betrekking tot de fondsen vinden we verder ‘klooster’ (81), ‘heerlijkheid’ (78) en ‘schepenbank’ (59).</p>
 <p>Grafiek 1 toont een overzicht van het aantal charters per jaar. Over acht eeuwen is het jaarlijkse gemiddelde ongeveer 222, overeenkomend met circa 0,61 charters per dag. Voor de vijftiende tot en met de achttiende eeuw (een periode waarin de dateringen in DCN redelijk lijken te kloppen) zijn het er ruim één tot circa vier per dag. Het is natuurlijk inzichtelijker om te kijken naar het verloop van de aantallen in de tijd. Zie daartoe ook tabel 3, met de aantallen uitgesplitst per eeuw. Het is duidelijk dat ‘Nederlandse’ charters pas vanaf het midden van de dertiende eeuw in enige aantallen zijn overgeleverd.<a href="#_ftn16" name="_ftnref16">[16]</a> Na 1300 gaat de curve steil omhoog, waarna vanaf het midden van de vijftiende tot het derde kwart van de zeventiende eeuw de jaarlijkse aantallen vaak boven de 1.000 stuks liggen. Oorkonden zijn dus zeker geen uniek middeleeuws fenomeen en komen gedurende het gehele <em>ancien régime</em> nog steeds algemeen voor. Kort na 1800 houdt de oorkonde als administratief document abrupt op te bestaan.<a href="#_ftn17" name="_ftnref17">[17]</a> Opvallend in de grafiek is een dip in het derde kwart van de zestiende eeuw, die verklaard zou kunnen worden door de Opstand, een periode waarin bestuurlijke activiteiten op een laag pitje kwamen te staan. Een verklaring van de duidelijke inzinking van de aantallen charters in het eerste kwart van dezelfde eeuw is evenwel niet zomaar te geven. Duidelijk is dat dit rijke corpus oorkonden van na 1300, en vooral die in de vroegmoderne tijd, voor historische onderzoekers een nog goeddeels onontgonnen bron vormt.</p>
 <p><img src="figures/bmgn-lchr.6997_fig4.jpg" alt="Image"></p>
-<p>[tbl: tb003]</p>
+<table>
+<thead><tr>
+<th>Periode</th>
+<th>Aantal charters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001-1100</td>
+<td>247</td>
+</tr>
+<tr>
+<td>1101-1200</td>
+<td>565</td>
+</tr>
+<tr>
+<td>1201-1300</td>
+<td>2.482</td>
+</tr>
+<tr>
+<td>1301-1400</td>
+<td>16.401</td>
+</tr>
+<tr>
+<td>1401-1500</td>
+<td>42.545</td>
+</tr>
+<tr>
+<td>1501-1600</td>
+<td>45.986</td>
+</tr>
+<tr>
+<td>1601-1700</td>
+<td>42.214</td>
+</tr>
+<tr>
+<td>1701-1800</td>
+<td>36.874</td>
+</tr>
+</tbody>
+</table>
 <p>Daarnaast onthult de grafiek problemen in DCN. Enkele onwaarschijnlijke uitschieters van meer dan 100 charters per jaar vóór 1250 zijn toe te schrijven aan de eerder genoemde fouten in de datering, met name in de documenten van vóór 1300. Deze uitschieters vallen meteen op, maar we zagen dat ook in latere perioden de dateringen in DCN een bepaalde, zij het veel lagere, foutmarge vertonen. Hiermee moet de onderzoeker wel rekening houden bij het zoeken op datum; het verdient de aanbeveling om niet blind op de gegeven dateringen te varen. Al met al geeft de grafiek een goede indruk van de algemene verdeling van de aantallen charters per jaar.</p>
 <p>Deze aantallen Nederlandse oorkonden over een periode van acht eeuwen doen de vraag rijzen naar de <em>inhoud</em> van die documenten. Die vraag is voor 180.000 charters niet zo eenvoudig te beantwoorden, gezien het brede scala aan onderwerpen dat erin wordt behandeld. De digitale data maken het wel mogelijk een eerste globale schets te geven van mogelijke verschuivingen in onderwerpen in de tijd, de aard van de rechtshandelingen, en de verdeling over de stad en het platteland. Daartoe is een systematische steekproef genomen door van 1005 tot 1850 om de tien jaar de charters op te vragen van een heel jaar. Van de woorden uit de omschrijvingen is een frequentieverdeling gemaakt en op basis daarvan zijn een aantal verzameltermen samengesteld met verwante woorden. Tenslotte is het frequentieverloop in de tijd geanalyseerd.<a href="#_ftn18" name="_ftnref18">[18]</a></p>
 <p>Het resultaat is uiteengezet in een achttal grafieken, waarin de cumulatieve aantallen zijn weergegeven per halve eeuw. Voor de vergelijkbaarheid is de schaal van de hoeveelheden gelijk gehouden. Zoals te verwachten was, komen door de archivaris in de beschrijvingen toegekende archieftermen, zoals ‘charter(s)’ en ‘akte’, het vaakst voor.<a href="#_ftn19" name="_ftnref19">[19]</a> Deze passen niet eens in de standaardschaal en komen over de gehele periode terug. Iets soortgelijks geldt voor auteursnamen en boektitels die verwijzen naar bestaande oorkondenedities.</p>
@@ -14816,18 +14905,168 @@ Rik Hoekstra</p>
 <p>Toponymisch onderzoek in DCN levert veel op, natuurlijk vooral in een grotere plaats. Wanneer we de plaatsnaam Leiden combineren met de woorden ‘straat’, ‘steeg’, ‘gracht’, ‘brug’, ‘poort’ (ook met een asterisk voor eventuele voorvoegsels: ‘<em>straat’, ‘</em>steeg’, et cetera), dan komen we op 1566 resultaten. Hierin moet nog wel duchtig worden gewied, aangezien er veel verdubbelingen zijn en ook straatnamen buiten Leiden af en toe voorkomen. Met deze resultaten kan de onderzoeker niettemin vooruit. Aardig in dit verband is bovendien onderzoek naar de verbreiding van een specifieke straatnaam. Een ‘Peperstraat’ wordt gevonden in vijftien steden en dorpen (71 hits, uit de periode 1326-1804), terwijl Rotterdam en Vlaardingen een Pepersteeg hebben (7 hits, meeste uit de achttiende eeuw) en Nijmegen een Pepergas (7 hits, meeste uit de zestiende eeuw).<a href="#_ftn24" name="_ftnref24">[24]</a></p>
 <h3 id="Erfpacht">Erfpacht<a class="anchor-link" href="#Erfpacht">&#182;</a></h3><p>Ter afsluiting diepen we een historische term verder uit met behulp van DCN. Daartoe is het verschijnsel ‘erfpacht’ gekozen. In zijn historische context duidt ‘erfpacht’ op de verpachting van goed, veelal agrarische gronden, tegen een vastgestelde pacht (ook wel cijns of tijns genoemd), waarbij de pacht van de pachter overgaat op diens erfgenaam. Daarin verschilt erfpacht dus van de zogenoemde tijd- of termijnpachten, zoals lijfpacht (een overeenkomst voor het leven van de pachter) of jaarpacht (een overeenkomst voor de periode van een jaar).<a href="#_ftn25" name="_ftnref25">[25]</a></p>
 <p>Zoeken naar de term ‘erfpacht’ in DCN levert 4.238 resultaten op, 2,4 procent van alle oorkonden in DCN.<a href="#_ftn26" name="_ftnref26">[26]</a> In tabel 4 staan de treffers uitgesplitst per eeuw, inclusief het betreffende percentage ‘erfpacht’-oorkonden.</p>
-<p>[tbl: tb004]</p>
+<table>
+<thead><tr>
+<th>Periode</th>
+<th>Aantal &#x2018;erfpacht&#x2019;</th>
+<th>Percentage &#x2018;erfpacht&#x2019;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1100-1300</td>
+<td>95</td>
+<td>3,2</td>
+</tr>
+<tr>
+<td>1301-1400</td>
+<td>538</td>
+<td>3,4</td>
+</tr>
+<tr>
+<td>1401-1500</td>
+<td>1.655</td>
+<td>3,9</td>
+</tr>
+<tr>
+<td>1501-1600</td>
+<td>1.072</td>
+<td>2,4</td>
+</tr>
+<tr>
+<td>1601-1700</td>
+<td>744</td>
+<td>1,8</td>
+</tr>
+<tr>
+<td>1701-1800</td>
+<td>491</td>
+<td>1,3</td>
+</tr>
+<tr>
+<td>Totaal</td>
+<td>4595</td>
+<td>2,5</td>
+</tr>
+</tbody>
+</table>
 <p>Het optredende verschil tussen de totalen in DCN en in de optelling per eeuw is een gevolg van de eerder gesignaleerde gebrekkig of niet gedateerde oorkonden in de door de instellingen aangeleverde data, waardoor records soms dubbel zijn geteld.<a href="#_ftn27" name="_ftnref27">[27]</a> Zoeken op de termen voor de twee typen termijnpacht leverde naar verhouding vrijwel niets op. ‘Lijfpacht’ gaf 31 treffers (periode 1260-1615),<a href="#_ftn28" name="_ftnref28">[28]</a> en ‘jaarpacht’ gaf 69 treffers (1331-1616). De variant ‘jaarhuur’ gaf één resultaat, in 1407. Deze uitkomst was op voorhand wel te verwachten. Akten waarin een erfpacht was vastgelegd waren in principe voor altijd geldig en moesten dus zorgvuldig worden bewaard (en werden voorts door instituties afgeschreven in hun registers en cartularia), terwijl de akten betreffende termijnpachten na afloop van de vastgestelde periode hun waarde verloren en zo vrijwel niet bewaard zijn gebleven.<a href="#_ftn29" name="_ftnref29">[29]</a> De term ‘erfcijns’ leverde wél treffers op, te weten 1.559 stuks,<a href="#_ftn30" name="_ftnref30">[30]</a> en de verspreiding over de eeuwen verloopt parallel aan die van de erfpacht zoals getoond in tabel 4: vóór 1300 0,4 procent, in de veertiende eeuw 1,4 procent, in de vijftiende eeuw 1,6 procent, in de zestiende eeuw 1,0 procent, in de zeventiende eeuw 0,7 procent en in de achttiende eeuw 0,03 procent.</p>
 <p><img src="figures/bmgn-lchr.6997_fig3.jpg" alt="Image"></p>
 <p>Erfpachtoorkonden zijn aangetroffen in 586 verschillende archieffondsen, variërend van één akte (in 241 gevallen) tot 220 aktes (in het Utrechtse kapittel van Sint Marie). Deze stukken worden voornamelijk in de archieven van geestelijke instellingen bewaard. Acht van de tien archieven met de meeste erfpachtoorkonden blijken kerkelijk te zijn, te weten het eerder genoemde kapittel van Sint Marie (220), de Nijmeegse broederschappen (155 stuks), het Utrechtse kapittel van Sint Pieter (132) en het Utrechtse Domkapittel (113), die elk meer dan honderd oorkonden hebben.<a href="#_ftn31" name="_ftnref31">[31]</a> In de top tien vinden we slechts twee niet-geestelijke archieven, namelijk het rechterlijk archief van Tiel en Zandwijk (86 stuks) en de charters behorend tot, of in bewaring gegeven bij, het stadsbestuur van Utrecht afdelingen I en II, met respectievelijk 84 en 98 stuks. In die laatste collectie is, afgezien van de gildenarchieven, het grootste deel van de stukken eveneens afkomstig uit religieuze instellingen, zoals broederschappen, kloosters, gods- en gasthuizen, en fundaties.<a href="#_ftn32" name="_ftnref32">[32]</a> Hierbij moet worden aangetekend dat juist de kerkelijke archieven relatief goed zijn overgeleverd, terwijl die van seculiere instellingen, en vooral die van particulieren, vaak flinke gaten vertonen, zo ze al zijn bewaard.</p>
 <p>Uit het bovenstaande blijkt dat de Utrechtse archieven zeer goed zijn vertegenwoordigd, en dus is er reden om per archiefinstelling te kijken naar de aantallen erfpachtoorkonden. Dit geeft een eerste inzicht in de regionale verspreiding van de historische erfpacht, aangezien de meeste instellingen grotendeels de archieven uit de eigen regio bevatten.<a href="#_ftn33" name="_ftnref33">[33]</a> We vergelijken daartoe de regionale archieven met de grootste aantallen erfpachtoorkonden, waarmee ruwweg respectievelijk Zuid-Holland, Utrecht, Noord-Brabant, het (oostelijk) Gelders rivierengebied, de rest van Gelderland, Limburg en Drenthe zijn afgedekt. In tabel 5 zijn voor deze instellingen de aantallen erfpachtakten per eeuw naast elkaar gezet als percentage van het totale aantal oorkonden per archiefdienst per eeuw.</p>
-<p>[tbl: tb005]</p>
+<table>
+<thead><tr>
+<th>Periode</th>
+<th>na</th>
+<th>hua</th>
+<th>bhic</th>
+<th>ran</th>
+<th>ga</th>
+<th>rhcl</th>
+<th>da</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1100-1300</td>
+<td>1,2</td>
+<td>5,5</td>
+<td>0,7</td>
+<td>0</td>
+<td>2,9</td>
+<td>2,1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1301-1400</td>
+<td>1,6</td>
+<td>4,8</td>
+<td>5,3</td>
+<td>5,1</td>
+<td>1,7</td>
+<td>4,2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1401-1500</td>
+<td>1,5</td>
+<td>6,2</td>
+<td>9,2</td>
+<td>14,2</td>
+<td>1,8</td>
+<td>4,4</td>
+<td>1,6</td>
+</tr>
+<tr>
+<td>1501-1600</td>
+<td>2,2</td>
+<td>4,3</td>
+<td>4,8</td>
+<td>7,0</td>
+<td>1,1</td>
+<td>2,2</td>
+<td>1,5</td>
+</tr>
+<tr>
+<td>1601-1700</td>
+<td>1,4</td>
+<td>4,7</td>
+<td>1,4</td>
+<td>0,1</td>
+<td>1,5</td>
+<td>0,8</td>
+<td>2,8</td>
+</tr>
+<tr>
+<td>1701-1800</td>
+<td>1,5</td>
+<td>5,6</td>
+<td>0,7</td>
+<td>0,04</td>
+<td>0,7</td>
+<td>0,3</td>
+<td>1,4</td>
+</tr>
+<tr>
+<td>Totaal</td>
+<td>1,6</td>
+<td>5,0</td>
+<td>5,1</td>
+<td>7,1</td>
+<td>1,3</td>
+<td>4,9</td>
+<td>1,7</td>
+</tr>
+</tbody>
+</table>
 <p>De tabel biedt enkele interessante aanknopingspunten voor toekomstig onderzoek naar ‘Erfpacht in Nederland 1100-1800’. Zo lijkt het erop dat het systeem van erfpacht in het westen en noorden van het land aanzienlijk minder verbreid was dan in het midden en zuiden. Opmerkelijk is dat Nijmegen en omgeving relatief de meeste erfpachten kent, terwijl de rest van Gelderland (in casu de Veluwe en de Achterhoek) juist het laagste cijfer te zien geven. Nader onderzoek zal moeten uitwijzen of het hier inderdaad gaat om regionale verschillen in de verbreiding van de erfpacht, of dat de gevonden variaties slechts verschillen in de manier van optekening en/of archivering weerspiegelen. Het grote verschil van de deels overlappende regio’s van RAN en GA maakt die laatste mogelijkheid op voorhand echter minder waarschijnlijk.</p>
 <p>Uit de cijfers kan worden afgeleid dat de veertiende en vijftiende eeuw in veel gebieden het hoogtepunt vormden van het erfpachtsysteem,<a href="#_ftn34" name="_ftnref34">[34]</a> terwijl in de regio’s met een lagere erfpachtverbreiding dat hoogtepunt juist later lag: in Zuid-Holland in de zestiende eeuw en in Drenthe zelfs pas in de zeventiende eeuw. Andere gebieden laten in de zeventiende en achttiende eeuw een duidelijke daling van de aantallen erfpachtoorkonden zien, hoewel opmerkelijk genoeg in Utrecht de aantallen ook in die latere periode min of meer gelijk blijven en nauwelijks onderdoen voor de middeleeuwse cijfers. Verder kan worden verondersteld dat de relatief geringe erfpachtdichtheid van Zuid-Holland veroorzaakt zou kunnen zijn doordat juist hier de geestelijke instellingen achterbleven bij de uitgifte ervan: van de aantallen erfpachten in NA blijkt slechts 10 procent bewaard in kerkelijke archieven. De rest is bewaard in de archieven van diverse adellijke families, met name in het rijke archief van de Nassause Domeinraad, en van seculiere instituties zoals het Hof van Holland en de Ridderschap van de Hollandse Staten.<a href="#_ftn35" name="_ftnref35">[35]</a></p>
 <p>Hierbij past de waarschuwing dat deze resultaten niet meer kunnen zijn dan een eerste indicatie van de verspreiding van de erfpacht. De gevonden aantallen zijn deels te gering om verantwoorde conclusies te trekken en zij worden bovendien vervuild door de eerdergenoemde beperkingen van het systeem van DCN. De onderzoeker kan (en moet) de resultaten handmatig controleren. Zo blijkt bij nadere inspectie bijvoorbeeld dat van de 66 oorkonden in HUA van vóór 1300 in werkelijkheid slechts zeventien stuks dateren uit de dertiende eeuw, waarmee het percentage uitkomt op een meer ‘normale’ 1,5 procent. De overige 49 stuks dienen derhalve over de volgende eeuwen herverdeeld te worden. In het kader van de onderhavige test van de mogelijkheden van DCN is een dergelijke handmatige correctie niet uitgevoerd.</p>
 <p>Vervolgens kan in DCN wat dieper worden ingezoomd op de zoekresultaten, dankzij de informatie die wordt gevonden in de beschrijvingen en regesten. Daaruit blijkt dat in verreweg de meeste gevallen, zelfs al in de veertiende eeuw, er in de stukken niet zozeer sprake is van de vestiging van een erfpacht op een stuk land,<a href="#_ftn36" name="_ftnref36">[36]</a> maar eerder van de overdracht van de inkomsten uit een erfpacht. Het gaat hier dus eigenlijk om de erftijns die, naar nu blijkt, meestal zelf ook ‘erfpacht’ wordt genoemd, ofwel ‘rente’.<a href="#_ftn37" name="_ftnref37">[37]</a> Dit is bijvoorbeeld het geval in een oorkonde uit 1338, omschreven als ‘Akte van transport door Willem Koenenzoon en zijn vrouw Korstiin aan Danyel van den Bossche van de erfpacht van een huis en hofstede in de [Utrechtse] Smeesteeg’.<a href="#_ftn38" name="_ftnref38">[38]</a> Uit die oorkonde, en honderden andere, wordt duidelijk dat erfpacht niet alleen in agrarische gebieden voorkwam, maar eveneens veelvuldig in steden, waar ook huizen in erfpacht werden uitgegeven.<a href="#_ftn39" name="_ftnref39">[39]</a> Voorts blijkt dat niet alleen onroerend goed als erfpachten werden overgedragen, maar ook tienden en bepaalde rechten,<a href="#_ftn40" name="_ftnref40">[40]</a> en dat de pachtsom, of een gedeelte ervan, veelvuldig in natura moest worden voldaan.<a href="#_ftn41" name="_ftnref41">[41]</a> Betaling van de pachtsom in natura was gunstig voor de verpachter: anders dan een gefixeerde geldsom zijn twee vaten rogge per jaar niet onderhevig aan inflatie.<a href="#_ftn42" name="_ftnref42">[42]</a></p>
 <p>Een en ander verklaart waarom de erfpacht zo veelvuldig en zo lang figureert in het oorkondenmateriaal. Nadat een perceel of huis eenmaal in erfpacht was uitgegeven kon de pachtopbrengst, die immers eeuwig bleef bestaan, steeds weer aan partijen worden overgedragen, bijvoorbeeld als onderpand of ter aflossing van een schuld. En inderdaad blijken erfpachtoorkonden uit de zestiende, zeventiende en achttiende eeuw vaak overdracht van renten uit – meestal stedelijke – erfpachten, hoewel nieuwe uitgiften van percelen in erfpacht nog steeds blijven voorkomen.<a href="#_ftn43" name="_ftnref43">[43]</a></p>
 <p>Uit zo’n eerste verkenning blijkt dat DCN de onderzoeker in korte tijd, en met weinig moeite, een flink stuk op weg kan helpen. Natuurlijk zal bij diepgravender onderzoek de tocht naar de archieven moeten worden gemaakt om de gevonden stukken zelf te bestuderen en ter aanvulling van het onderzoekscorpus met relevante stukken die niet in DCN staan, zoals transportregisters van onroerend goed of cartularia met afschriften van oorkonden.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<button class="sidebar-toggle" data-content="results">Results</button>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Mogelijkheden-van-DCN-en-methodische-reflectie">Mogelijkheden van DCN en methodische reflectie<a class="anchor-link" href="#Mogelijkheden-van-DCN-en-methodische-reflectie">&#182;</a></h3><p>De bovenstaande voorbeelden mogen duidelijk maken dat DCN nieuwe mogelijkheden opent voor de historische onderzoeker, zowel de professional als de amateur. De hierboven beschreven voorbeelden laten zien dat in het geval van onderzoek met DCN er eigenlijk geen sprake is van een dichotomie tussen het traditionele vraaggestuurde historisch onderzoek en een datagestuurde methode zoals die als vanzelf voort zou vloeien uit het gebruik van grote datacomplexen.<a href="#_ftn44" name="_ftnref44">[44]</a> Het automatisch genereren van een cijfermatige analyse van de inhoud van DCN, zoals de frequentieverdelingen van de meest voorkomende woorden per periode, is een voorbeeld van een data-georiënteerde aanpak. Het voorkomen van bepaalde termen door de eeuwen heen laat meteen zien dat de combinatie van beide methoden niet alleen uitstekend werkt, maar ook noodzakelijk is. Uitgaand van een specifieke vraag, zoals de ontwikkeling van het leenstelsel, leveren <em>big data</em> binnen enkele minuten een eerste inzicht. De onderzoeker blijft er wel mee aan de buitenkant. Bovendien zijn de data vaak nog wat vervuild en is het niet duidelijk wat ze precies betekenen. De automatische resultaten zijn daarmee niet zozeer kant-en-klare onderzoeksuitkomsten, maar veeleer een halffabricaat voor analyse en verder onderzoek. De verder uitgewerkte voorbeelden van Van Brederode en erfpacht maken duidelijk dat het in DCN mogelijk is om voortgezet onderzoek te verrichten naar een bepaald onderwerp, zowel lokaal en qua tijd in de diepte als over de breedte voor de <em>longue durée</em>. Andersom maakt DCN het mogelijk specifiek onderzoek, waarin enkele oorkonden of bijvoorbeeld een persoon, familie, of een plaats als uitgangspunt worden genomen, met data-georiënteerde methoden eenvoudig in breder perspectief te plaatsen.</p>
 <p>Naarmate de dataverzamelingen groter en complexer worden, wordt het belangrijker transparant te zijn over de methoden die worden gebruikt en daarover te rapporteren.<a href="#_ftn45" name="_ftnref45">[45]</a> In methodologisch opzicht stelt dit de onderzoeker voor een aantal opgaven die voor een deel met de digitale aard van het materiaal samenhangen, maar tegelijkertijd eigenlijk een verlengstuk zijn van de traditionele historische bronnenkritiek. DCN bevat als samengesteld instrument alle hiaten en eigenaardigheden waar de archiefonderzoeker altijd al op bedacht moest zijn. Archieven zijn geheel of gedeeltelijk verloren gegaan en mensen en instellingen uit het verleden bewaarden vooral wat ze zelf als waardevol beschouwden. Omdat DCN alle beschikbare materiaal bijeenbrengt wordt dit bezwaar soms ondervangen doordat verspreide gegevens bij elkaar een completer corpus vormen. Voorheen verspreide akten geven elkaar zo context en deelcollecties die uit het ene archief zijn overgeleverd roepen vragen op over het gebrek aan gegevens uit andere archieven.<a href="#_ftn46" name="_ftnref46">[46]</a> Wat is er zo uniek aan de ene collectie ten opzichte van de andere? Is het toeval of zit er meer achter? Dit zijn zomaar enkele vragen die met het panorama van DCN beantwoord zouden kunnen worden.</p>
 <p>De ‘oude’ kwesties van bronnenkritiek hebben ook een digitaal verlengstuk. Hierover schrijft de Amerikaanse historicus Jo Guldi het volgende:</p>
@@ -14853,8 +15092,7 @@ Rik Hoekstra</p>
   <div id="sidebar-content">
     <!-- Content will be dynamically loaded here based on the selected button -->
   </div>
-</div><button class="sidebar-toggle" data-content="methodology">Methodologie</button>
-<button class="sidebar-toggle" data-content="results">Results</button><style>
+</div><button class="sidebar-toggle" data-content="methodology">Methodologie</button><style>
   /* Your sidebar and button styles here */
   #sidebar {
     position: fixed;
@@ -14918,17 +15156,6 @@ Rik Hoekstra</p>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14947,6 +15174,9 @@ Rik Hoekstra</p>
 
 </div>
 </body>
+
+
+
 
 
 
